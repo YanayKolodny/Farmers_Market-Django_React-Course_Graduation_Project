@@ -1,0 +1,72 @@
+
+        ---------- Ask Eyal ----------
+
+
+        ----------  Answered ----------
+ - Check about locations api / finding area by address ---ASK EYAL--- need to explore addresses API
+
+
+        ---------- TASKS ----------
+ - patch method for products, arrange front (GUI) and back updatation
+ - downloading classes videos
+ - uploading photos (suggest defult photos)
+
+
+       ___BACK_END___
+ - Stands, Categories and pruducts get does'nt require authentications.
+ - Change the OrderedProduct table to be based on forigen key of order/product
+ - Creat CRUD for the order models
+ - add GET Stand PRODUCTs
+ - add GET category PRODUCTs
+ - find how to save photos in different sizes 
+     
+       ___FRONT_END___
+ - solve GUI for seller/shopper
+ - Arrange GUI of user login (if logged and if not logged)
+ - update login to form
+
+
+      ___Products___
+ - Back - delete product on the views needs to delete the photo from the media
+ - Front - *ASK Eyal* adding product - needs to fix reucer to update the gui, 
+       but how to update the photo without calling the server again?
+ - Back & Front - get the photos with the product and update in GUI - response with the products list
+ - Front - Arrange the adding product form into a modal
+
+
+       ___Stands___
+ - Back & Front - Complete the Stand Management Crud - creat update and delete options
+
+ 
+
+
+      ___Login___
+ - Front - Login gui need to stay full size and not shrink when sliding the screen smaller
+
+
+
+
+        ---------- Done ----------
+ - Create method to recieve categories by stand --Done--
+ - Django Logout --DONE--
+ - Update Orders Table --DONE--
+ - one to one & ForeignKey key in tables --DONE--
+ - save token to local and create methood that logins automaticly --DONE--
+ - arrange update cart in local storage into array and then the auto update of the cart --DONE--
+ - unallow adding the same product twice to cart (in stead adding the amount sended onClick) --DONE--
+ - erase product from cart if amount = 0 (could also be relevant for general products) --DONE--
+ 
+
+            ___Stands___
+ - Back - Allow only 1 stand per user
+ - Front - Solve on click of stand card to open the stands products component with the filtered products by stand_id
+    
+
+      ___Products___
+- Front - update the adding amount of product to just change the amount instead of add more.
+
+
+          >>>>>Update Mickey<<<<<
+          - added: getting stand by user_id
+          - added: getting stands by area_id
+          - added: getting category by stand_id
