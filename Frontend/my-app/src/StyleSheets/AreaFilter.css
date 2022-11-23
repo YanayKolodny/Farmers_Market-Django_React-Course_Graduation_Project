@@ -1,0 +1,54 @@
+.filter_container_2 {
+    background-color: rgba(241,229,214,255);
+}
+
+.filter_btnBox_2 {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px 15px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 20px;
+    overflow: auto;
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #f5e2bf;
+    font-size: 18px;
+}
+
+.filter_btnBox::-webkit-scrollbar {
+    height: 3px;
+}
+
+.filter_btnBox::-webkit-scrollbar-thumb {
+    background-color: #8fc700b6;
+    border-radius: 3px;
+}
+
+.filter_icon {
+    width: 80px;
+    color: #8fc700;
+    padding: 0;
+}
+
+.filter_btn_area {
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    border-radius: 20px;
+    background-color: #8fc700;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 18px;
+    -webkit-text-stroke: 0.2px rgb(214, 233, 208);
+    cursor: pointer;
+    transition: all .3s ease;
+    padding: 0 20px;
+}
+
+.filter_btn_area:hover {
+    background-color: #7fb002;
+}

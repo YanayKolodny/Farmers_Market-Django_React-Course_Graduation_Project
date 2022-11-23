@@ -1,0 +1,87 @@
+.stand_container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 450px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  row-gap: 20px;
+  padding: 20px;
+}
+
+.standBox {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+  max-height: 350px;
+  width: 100%;
+  border: 2px;
+  border-style:solid;
+  border-color: rgba(245,226,191,255);
+  padding: 16px;
+}
+
+.standBox:hover {
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 30px;
+  transform: translateY(-3px);
+}
+
+.stand_img {
+  position: relative;
+  max-height: 220px;
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.standContent {
+  width: 100%;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.standTitle {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.standPrice {
+  width: 100%;
+  text-align: left;
+  margin-top: 5px;
+}
+
+.standPrice span {
+  font-size: 15px;
+}
+
+
+.goToStand_button {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  display: block;
+  margin-top: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #8fc700;
+}
+

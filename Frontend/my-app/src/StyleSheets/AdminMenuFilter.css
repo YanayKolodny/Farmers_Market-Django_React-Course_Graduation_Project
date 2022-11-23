@@ -1,0 +1,57 @@
+
+
+.filter_container {
+    width: fit-content;
+    margin: 0 auto;
+    background-color: rgba(241,229,214,255);
+}
+
+.filter_btnBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px 10px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 5px 20px;
+    overflow: auto;
+    background-color: #f5e2bf;
+
+}
+
+.filter_btnBox::-webkit-scrollbar {
+    height: 3px;
+}
+
+.filter_btnBox::-webkit-scrollbar-thumb {
+    background-color: #8fc700b6;
+    border-radius: 3px;
+}
+
+.filter_icon {
+    width: 80px;
+    color: #8fc700;
+    padding: 0;
+}
+
+.filter_btn {
+    height: 35px;
+    line-height: 35px;
+    display: block;
+    border-radius: 25px;
+    background-color: rgb(53, 169, 231);
+    border: none;
+    outline: none;
+    color:rgb(254, 255, 255);
+    outline: auto;
+    outline-color: rgb(3, 82, 125);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .3s ease;
+    padding: 0 20px;
+}
+
+.filter_btn:hover {
+    background-color: #679002;
+}

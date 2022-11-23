@@ -1,0 +1,12 @@
+.App {
+  position: relative;
+  box-sizing: border-box;
+  
+}
+
+.MainContainer {
+  min-height: 100vh;
+}
+
+
+

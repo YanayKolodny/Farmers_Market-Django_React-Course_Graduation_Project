@@ -1,0 +1,62 @@
+.registrationPageContainer {
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-image: url('../../public/BackgroundPhotos/RegPageBackgound.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titlesDiv {
+  position: relative; 
+  float: left; 
+  left: 5%; 
+  top: 12%; 
+  width: 40%; 
+}
+
+/* H1 Title on the left of the registration page START */
+.H1_DIV_ALIGN{
+  text-align: center;
+}
+
+.test{
+  color: rgba(135, 206, 250, 0.745);
+}
+
+.REG_PAGE_TITLE{
+  color: hsl(217, 84%, 95%);
+  font-family: Comic Sans MS;
+  text-shadow: -5px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+}
+
+.FMO_REG_PAGE_TITLE{
+  color: hsl(110, 80%, 56%) !important;
+  font-family: Comic Sans MS;
+  text-shadow: -5px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+}
+/* H1 Title on the left of the registration page END */
+
+
+/* P Small title on the left of the registration page START */
+.SMALL_TITLE_MAIN{
+  font-family: Comic Sans MS;
+  font-size: 35px; 
+  text-align: center
+}
+
+.SMALL_TITLE_WHITE{
+  color: hsl(218, 81%, 95%);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+}
+
+.SMALL_TITLE_RED{
+  color: hsl(6, 98%, 50%);
+  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255)
+}
+/* P Small title on the left of the registration page END */
+
+
