@@ -67,4 +67,4 @@ $ npm start
 ```
 
 
-![tekst alternatywny]
+![tekst alternatywny](Frontend/my-app/public/BackgroundPhotos/CheckOutComplete.png)
