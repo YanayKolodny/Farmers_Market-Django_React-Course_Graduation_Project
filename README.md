@@ -13,10 +13,27 @@ It is our graduation project from John Bryce College in Tel Aviv - a Full-Stack 
 The Farmer's Market Online is a market where user's can serve both as costumer and as "stand" owners, where they can sell their goods.
 
 ## Features - What can a user do:
-* Visite the market and the stands.
-* Register/Login.
-* Open a stand (after login).
-* 
+
+#### New users:
+* Visite the market and the stands
+* Register/Login
+* Edit profile details
+* Add products to the cart, change amounts of products, create order
+* Orders history page
+* Open a stand with uploaded photo - (after login)
+
+#### Stand Owners - After opening a stand:
+* Edit the stand's details
+* Creat and manage ctegories
+* Add products (with photos) to the stand and manage the stand's products
+* Orders history page (from the stand)
+
+#### Superuser:
+* Market's information panel
+* Areas management
+* Stands management
+* Products management
+* Orders page (of the entire market)
 	
 ## Technologies
 Project is created with:
