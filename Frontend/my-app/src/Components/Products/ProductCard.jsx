@@ -36,17 +36,17 @@ export default function ProductCard(props) {
             alt="product" />
         </div>
 
-        <div className="content">
+        <div className="content" style={{ fontFamily: "monospace" }}>
 
-          <div className="title">
+          <div className="standTitle" style={{ textDecoration: "none", fontSize: "22px", fontWeight: "bold" }}>
             <span>{props.prodName}</span>
           </div>
 
-          <div className="price">
+          <div className="info" >
             <span>{props.price} ₪</span>
           </div>
 
-          <div className="desc">
+          <div className="desc" >
             <span>{props.desc}</span>
           </div>
 
