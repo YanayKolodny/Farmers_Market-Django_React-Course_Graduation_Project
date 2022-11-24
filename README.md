@@ -43,9 +43,16 @@ Project is created with:
 * Redux
 	
 ## Pages Examples:
+
+### Welcome Page:
 ![welcomePage](https://user-images.githubusercontent.com/108010066/203860471-0bb9dc75-5c8c-4491-ab18-f5cc8c45039e.jpeg)
 
-	
+### Stands Page:
+![welcomePage](https://user-images.githubusercontent.com/108010066/203860585-ea3a8dbc-25b3-4e21-ae88-9ea14d8efdb0.jpeg)
+
+### Products Page:
+![productsPage](https://user-images.githubusercontent.com/108010066/203860621-9d72aab0-2c1b-4343-8903-8f93abdbfd1d.jpeg)
+
 ## Setup
 After completing the git clone process:  
 (Please pay attention that if there's difference in actions for Windown/Mac the actions for mac will be added to the right after the "|" ) 
@@ -70,6 +77,3 @@ $ npm i
 $ npm start
 
 ```
-
-
-![tekst alternatywny](Frontend/my-app/public/BackgroundPhotos/CheckOutComplete.png)
