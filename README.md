@@ -17,13 +17,29 @@ It is an online market where user's can serve both as costumer and as "stand" ow
 Project is created with:
 * Django version: 4.0.6
 * React version: 18.2.0
+* Redux
 	
 ## Setup
-To run this project, install it locally using npm:
-
+After completing the git clone process:  
+(Please pay attention that if there's difference in actions for Windown/Mac the cations for mac will be added to the right after the "|" ) 
 #### Terminal 1 - Django
 ```
-$ cd ../lorem
-$ npm install
+$ cd Farmers_Market-Django_React-Course_Graduation_Project/Backend/
+
+	Windows:			       		Mac:
+$ pip install virtualenv		|	$ pip3 install virtualenv
+$ pip install virtualenv		|	$ pip3 install virtualenv
+$ python -m virtualenv myenv		|	$ python3 -m virtualenv myenv
+$ myenv\Scripts\activate		|	$ source myenv/bin/activate
+$ pip install -r requirements.txt	|	$ pip3 install -r requirements.txt
+$ python manage.py runserver		|	$ python manage.py runserver
+
+```
+
+#### Terminal 2 - React
+```
+$ cd Farmers_Market-Django_React-Course_Graduation_Project/Frontend/my-app/
+$ npm i
 $ npm start
+
 ```
