@@ -5,6 +5,7 @@
 * [General info](#general-info)
 * [Features](#features)
 * [Technologies](#technologies)
+* [Pages Examples](#pagesexamples)
 * [Setup](#setup)
 
 ## General info
@@ -35,11 +36,14 @@ The Farmer's Market Online is a market where user's can serve both as costumer a
 * Products management
 * Orders page (of the entire market)
 	
-## Technologies
+## Technologies:
 Project is created with:
 * Django version: 4.0.6
 * React version: 18.2.0
 * Redux
+	
+## Pages Examples:
+	<img src="/ReadmeImages/productsPage.jpeg" width="100" height="100">
 	
 ## Setup
 After completing the git clone process:  
