@@ -3,14 +3,16 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [Features](#features)
 * [Technologies](#technologies)
 * [Setup](#setup)
 
 ## General info
 This project has created by Yanay Kolodny and Michael Stern on october-november of 2022. 
 It is our graduation project from John Bryce College in Tel Aviv - a Full-Stack Python Course.
+The Farmer's Market Online is a market where user's can serve both as costumer and as "stand" owners, where they can sell their goods.
 
-It is an online market where user's can serve both as costumer and as "stand" owners.
+## Features - What can a user do:
 
 	
 ## Technologies
@@ -21,7 +23,7 @@ Project is created with:
 	
 ## Setup
 After completing the git clone process:  
-(Please pay attention that if there's difference in actions for Windown/Mac the cations for mac will be added to the right after the "|" ) 
+(Please pay attention that if there's difference in actions for Windown/Mac the actions for mac will be added to the right after the "|" ) 
 #### Terminal 1 - Django
 ```
 $ cd Farmers_Market-Django_React-Course_Graduation_Project/Backend/
