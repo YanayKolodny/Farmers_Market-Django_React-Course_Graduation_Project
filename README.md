@@ -7,7 +7,8 @@
 * [Setup](#setup)
 
 ## General info
-This project is a graduation project from John Bryce College in Tel Aviv.
+This project has created by Yanay Kolodny and Michael Stern on october-november of 2022. 
+It is our graduation project from John Bryce College in Tel Aviv - a Full-Stack Python Course.
 
 It is an online market where user's can serve both as costumer and as "stand" owners.
 
@@ -20,6 +21,7 @@ Project is created with:
 ## Setup
 To run this project, install it locally using npm:
 
+#### Terminal 1 - Django
 ```
 $ cd ../lorem
 $ npm install
