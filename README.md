@@ -43,7 +43,8 @@ Project is created with:
 * Redux
 	
 ## Pages Examples:
-	<img src="/ReadmeImages/productsPage.jpeg" width="100" height="100">
+![welcomePage](https://user-images.githubusercontent.com/108010066/203860471-0bb9dc75-5c8c-4491-ab18-f5cc8c45039e.jpeg)
+
 	
 ## Setup
 After completing the git clone process:  
