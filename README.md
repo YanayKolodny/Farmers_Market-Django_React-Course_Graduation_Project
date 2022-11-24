@@ -65,3 +65,6 @@ $ npm i
 $ npm start
 
 ```
+
+
+![tekst alternatywny]
