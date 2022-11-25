@@ -3,8 +3,8 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Features](#features)
 * [Technologies](#technologies)
+* [Features](#features)
 * [Pages Examples](#pagesexamples)
 * [Setup](#setup)
 
@@ -13,6 +13,14 @@ This project has created by Yanay Kolodny and Michael Stern on october-november 
 It is our graduation project from John Bryce College in Tel Aviv - a Full-Stack Python Course.
 The Farmer's Market Online is a market where user's can serve both as costumer and as "stand" owners, where they can sell their goods.
 
+## Technologies:
+Project is created with:
+* Django version: 4.0.6
+* React version: 18.2.0
+* Redux
+* BootStrap, Mui, MDB
+* CSS
+	
 ## Features - What can a user do:
 
 #### New users:
@@ -35,12 +43,6 @@ The Farmer's Market Online is a market where user's can serve both as costumer a
 * Stands management
 * Products management
 * Orders page (of the entire market)
-	
-## Technologies:
-Project is created with:
-* Django version: 4.0.6
-* React version: 18.2.0
-* Redux
 	
 ## Pages Examples:
 
