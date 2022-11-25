@@ -5,15 +5,14 @@ import { selectToken } from '../../../Slices/loginSlice'
 import { getOrderProductsAsync, selectOrderProducts } from '../../../Slices/ordersSlice'
 
 import {
-  MDBCol, MDBCardBody, MDBRow,
+  MDBCol, MDBRow, MDBTypography,
   MDBCard, MDBModal, MDBModalBody,
-  MDBModalContent, MDBModalDialog, MDBTypography,
-
+  MDBModalContent, MDBModalDialog, MDBCardBody,
 } from "mdb-react-ui-kit";
 import { Button } from "@mui/material";
 
-// This component is the a modal that shows the products of an order that was made by the user.
-export default function UserOrderProducts(props) {
+// This component is the a modal that shows the products of an order that was made from the stand by different users.
+export default function WebAdminOrderProducts(props) {
   const dispatch = useDispatch()
   const token = useSelector(selectToken)
   const orderProducts = useSelector(selectOrderProducts)
@@ -34,7 +33,7 @@ export default function UserOrderProducts(props) {
         <MDBRow className="justify-content-center align-items-center h-100 text-center">
           <MDBCol>
 
-            <Button className="goToOrderProds_button"
+            <Button className="goToOrderProds_button" style={{ fontSize: "20px" }}
               onClick={() => toggleShowAndAddOrderProducts({ token: token, order_id: props._id })}>
               Order Details
             </Button>
@@ -50,8 +49,9 @@ export default function UserOrderProducts(props) {
                       className="mb-5"
                       style={{ color: "#35558a" }}
                     >
-                      <span style={{ fontStyle: "oblique" }}>Order no. {props._id}</span><br />
-                      From: {props.stand_id.standName}
+                      <p style={{ fontStyle: "oblique" }}>Order no. <b>{props._id}</b></p>
+                      <p><span style={{ fontStyle: "oblique" }}>Costumer:</span> <b>{props.profile.fullName}</b></p>
+                      <p><span style={{ fontStyle: "oblique" }}>Stand:</span> <b>{props.stand_id.standName}</b></p>
                     </MDBTypography>
                     <div className="">
                       {orderProducts.map((prod) => <div>
@@ -61,25 +61,24 @@ export default function UserOrderProducts(props) {
                               <MDBCardBody >
 
                                 <MDBRow style={{ fontSize: "18px" }}>
-                                  <div class="col-md-2">&emsp;
+                                  <div class="col-md-1">
                                     <img src={`http://127.0.0.1:8000${prod.prod_id.image}`}
-                                      class="img-fluid width-10px" alt="Phone" style={{ maxWidth: "50px" }}
-                                    />
+                                      class="img-fluid width-10px" alt="Phone" style={{ maxWidth: "50px" }} />
                                   </div>
                                   <MDBCol
-                                    md="3"
+                                    md="2"
                                     className="text-center d-flex justify-content-left align-items-center">
                                     <b>{`${prod.prod_id.prodName}`}</b>
                                   </MDBCol>
 
                                   <MDBCol
-                                    md="2"
+                                    md="3"
                                     className="text-center d-flex justify-content-left align-items-center">
                                     <b>price:&nbsp; {prod.prod_id.price} ₪</b>
                                   </MDBCol>
 
                                   <MDBCol
-                                    md="2"
+                                    md="3"
                                     className="text-center d-flex justify-content-left align-items-center">
                                     <b>Amount:&nbsp; {prod.amount}</b>
                                   </MDBCol>

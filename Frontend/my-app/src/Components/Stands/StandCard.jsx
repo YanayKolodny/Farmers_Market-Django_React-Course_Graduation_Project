@@ -6,8 +6,6 @@ import { NavLink } from "react-router-dom";
 import { StandProductsProvider } from '../../Slices/productsSlice'
 import { updStandCart } from '../../Slices/standCartSlice'
 
-import '../../StyleSheets/StandsStylesheet.css'
-
 // This component uses as the card to present a stand by receiving its data as props.
 // The StandComponent module sends the stands data here in order to present them. 
 export default function StandCard(props) {

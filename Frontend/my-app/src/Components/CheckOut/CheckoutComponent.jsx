@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, NavLink, Link } from "react-router-dom";
 
@@ -8,12 +8,11 @@ import {
   MDBIcon, MDBInput, MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
-import styles from '../../StyleSheets/CheckOutComponent.module.css'
 import { BsTrash } from "react-icons/bs";
 import { FaCcPaypal, FaCcMastercard, FaCcVisa } from "react-icons/fa"
 
 import { selectToken, selectUser_id, selectLogged } from '../../Slices/loginSlice'
-import { selectStandCartProds, selectTotalPrice, delFromCart, updProdInCart, emptyCart } from '../../Slices/standCartSlice'
+import { selectStandCartProds, delFromCart, updProdInCart, emptyCart } from '../../Slices/standCartSlice'
 import { setSellingStandData, selectStandCart } from '../../Slices/standsSlice'
 import { createOrderAsync } from '../../Slices/ordersSlice'
 
@@ -96,7 +95,7 @@ export default function CheckoutComponent() {
 
                                 {/* Product's Amount */}
                                 <MDBTypography tag="h5" className="fw-normal mb-0">
-                                  <input type="number" defaultValue={prod.amount} className={styles.ProductAmountInput}
+                                  <input type="number" defaultValue={prod.amount} className="ProductAmountInput"
                                     onChange={(e) => dispatch(updProdInCart({
                                       prod_id: prod.id,
                                       newAmount: parseInt(e.target.value),
@@ -114,7 +113,9 @@ export default function CheckoutComponent() {
                               </div>
 
                               {/* Trash Button - erase from cart */}
-                              <button onClick={() => dispatch(delFromCart({ user_id: user_id, stand_id: stand_id, prod_id: prod.id }))} className={styles.TrashButton}>
+                              <button
+                                onClick={() => dispatch(delFromCart({ user_id: user_id, stand_id: stand_id, prod_id: prod.id }))}
+                                className="TrashButton">
                                 <BsTrash />
                               </button>
 
@@ -144,13 +145,13 @@ export default function CheckoutComponent() {
                         <div>
                           <p className="large">Card type:</p>
                           <a href="#!" type="submit" className="text-white">
-                            <MDBBtn className={styles.CardTypeBtns}> <FaCcMastercard /></MDBBtn>
+                            <MDBBtn className="CardTypeBtns"> <FaCcMastercard /></MDBBtn>
                           </a>
                           <a href="#!" type="submit" className="text-white">
-                            <MDBBtn className={styles.CardTypeBtns}><FaCcVisa /></MDBBtn>
+                            <MDBBtn className="CardTypeBtns"><FaCcVisa /></MDBBtn>
                           </a>
                           <a href="#!" type="submit" className="text-white">
-                            <MDBBtn className={styles.CardTypeBtns}><FaCcPaypal /></MDBBtn>
+                            <MDBBtn className="CardTypeBtns"><FaCcPaypal /></MDBBtn>
                           </a>
                         </div>
 

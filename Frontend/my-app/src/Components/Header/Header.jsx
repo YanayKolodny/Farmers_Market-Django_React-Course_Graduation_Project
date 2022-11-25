@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 import { Link, useLocation } from "react-router-dom";
 import { logOutUserAsync, selectLogged, selectIsStaff, selectToken, selectUserName, selectUser_id, getProfileAsync, selectIsSuperuser } from "../../Slices/loginSlice";
 import { setAdminStand } from '../../Slices/standsSlice'
 
-import "../../StyleSheets/Header.css";
 import ModalCart from "../Cart/ModalCart"
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
@@ -18,13 +17,11 @@ import MuseumTwoToneIcon from '@mui/icons-material/MuseumTwoTone';
 import CreateIcon from "@mui/icons-material/Create";
 import Avatar from "@mui/material/Avatar";
 import { deepPurple } from "@mui/material/colors";
-import {
-  selectStandCartProds, emptyCart
-} from "../../Slices/standCartSlice";
+import { selectStandCartProds, emptyCart } from "../../Slices/standCartSlice";
 
 // This component is the header of the project.
 // It is serves as navigation bar that is being updated accoring to the user type and the url.
-function Header() {
+export default function Header() {
   const dispatch = useDispatch();
   const currentUrl = useLocation();
   const StandCartProds = useSelector(selectStandCartProds);
@@ -44,7 +41,6 @@ function Header() {
     <div className="mainDiv">
       <header className="header">
         <nav className="nav">
-          {/* <div className="search_header">{pathname === "/" && <SearchBar />}</div> */}
           <Link to={"/"} className="logo">
             <Tooltip title="Farmers Market">
               <IconButton>
@@ -159,4 +155,4 @@ function Header() {
   );
 }
 
-export default Header;
+

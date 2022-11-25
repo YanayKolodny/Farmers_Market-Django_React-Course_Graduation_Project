@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { selectProds, addProductAsync, StandProductsProvider, selectStandProducts } from '../../../Slices/productsSlice'
 import { selectAdminStand } from '../../../Slices/standsSlice'
 import { selectToken } from '../../../Slices/loginSlice'
-import { setAdminStandCats, selectAdminStandCats, getCategoryNameFromId } from '../../../Slices/categoriesSlice';
+import { setAdminStandCats, selectAdminStandCats } from '../../../Slices/categoriesSlice';
 
 import {
   MDBBtn, MDBRow,
@@ -38,8 +38,6 @@ const StandAdminProducts = () => {
     dispatch(StandProductsProvider(adminStand["_id"]))
   }, [allProds.length, allProds.value])
 
-  console.log("adminStandprods", adminStandprods)
-
 
   const handleProdName = (e) => {
     e.preventDefault();
@@ -64,12 +62,10 @@ const StandAdminProducts = () => {
   const handleCategory = (e) => {
     e.preventDefault();
     setCategory(e.target.value);
-    console.log(e.target.value)
   };
 
   const handleImage = (e) => {
     e.preventDefault();
-    console.log(e.target.files);
     setImage(e.target.files[0]);
   };
 

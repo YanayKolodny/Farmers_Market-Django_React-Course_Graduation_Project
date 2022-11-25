@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useDispatch } from 'react-redux';
 import { standsAreaFilter } from '../../Slices/standsSlice'
-import "../../StyleSheets/AreaFilter.css";
 
 // In this Component the filter represent the different areas of stands to be presented.
 // It serves as the nav bar in the StandsComponent.

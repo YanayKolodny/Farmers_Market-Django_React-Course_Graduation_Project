@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom'
 
 import { selectLastOrderDetails } from '../../Slices/ordersSlice'
 
-import '../../StyleSheets/CheckOutSuccess.css'
 
 const CheckOutComplete = () => {
   const orderDetails = useSelector(selectLastOrderDetails)

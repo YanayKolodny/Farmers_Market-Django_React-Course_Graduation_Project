@@ -3,20 +3,18 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { getUserOrdersAsync, selectUserOrders } from '../../../Slices/ordersSlice'
 import { selectToken, selectUser_id } from '../../../Slices/loginSlice'
-import { selectUserName } from '../../../Slices/loginSlice'
 
 import {
   MDBCard, MDBCardBody, MDBCardFooter,
-  MDBCardHeader, MDBCardImage, MDBCol,
-  MDBContainer, MDBProgress, MDBProgressBar,
-  MDBRow, MDBTypography, MDBBtn
+  MDBCardHeader, MDBCol, MDBTypography,
+  MDBContainer, MDBRow
+
 } from "mdb-react-ui-kit";
 import UserOrderProducts from "./UserOrderProducts";
 
 // This component is the user's orders page - it contain all the orders he/she has made:
 export default function UserOrdersPage() {
   const dispatch = useDispatch()
-  const username = useSelector(selectUserName)
   const token = useSelector(selectToken)
   const user_id = useSelector(selectUser_id)
   const userOrders = useSelector(selectUserOrders)

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 
 // In this Component the navBar between the different pages in the stand admin menu:
-export default function StandAdminMenuFilter() {
+export default function WebAdminMenuFilter() {
 
   return (
     <div className="filter_container_2">
@@ -13,33 +13,38 @@ export default function StandAdminMenuFilter() {
           <Link to="" className="link">
             <button
               className="filter_btn">
-              Edit Stand
+              General Information
             </button>
           </Link>
 
-          <Link to="productsadmin" className="link">
+          <Link to="areaswebadmin" className="link">
             <button
-              className="filter_btn"
-            >
+              className="filter_btn">
+              Manage Areas
+            </button>
+          </Link>
+
+          <Link to="standswebadmin" className="link">
+            <button
+              className="filter_btn">
+              Manage Stands
+            </button>
+          </Link>
+
+          <Link to="productswebadmin" className="link">
+            <button
+              className="filter_btn">
               Manage Products
             </button>
           </Link>
 
-          <Link to="categoriesadmin" className="link">
+          <Link to="orderswebadmin" className="link">
             <button
-              className="filter_btn"
-            >
-              Manage Categories
+              className="filter_btn">
+              Manage Orders
             </button>
           </Link>
 
-          <Link to="ordersadmin" className="link">
-            <button
-              className="filter_btn"
-            >
-              Manage orders
-            </button>
-          </Link>
         </div>
       </nav>
     </div>

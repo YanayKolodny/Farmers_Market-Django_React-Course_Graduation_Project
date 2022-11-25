@@ -1,8 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useParams } from "react-router-dom";
 
-import "../../StyleSheets/Products.css";
 import ProductCard from './ProductCard';
 import CategoryFilter from './CategoryFilter';
 import { Grid } from '@mui/material';
@@ -22,7 +21,6 @@ const StandProductsPage = () => {
   const user_id = useSelector(selectUser_id)
   const stand_id = params.stand_id
 
-  console.log("standProds", standProds)
 
   useEffect(() => {
     dispatch(updStandCart({ stand_id: stand_id, user_id: user_id }))

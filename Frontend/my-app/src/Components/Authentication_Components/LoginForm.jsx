@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import {
   MDBBtn, MDBContainer, MDBRow,
   MDBCol, MDBCard, MDBCardBody,
@@ -7,9 +7,7 @@ import {
 } from 'mdb-react-ui-kit';   // Package that provide designs for this component
 import styles from '../../StyleSheets/LoginStyles.module.css';
 
-import { loginUserAsync }
-  from '../../Slices/loginSlice'
-
+import { loginUserAsync } from '../../Slices/loginSlice'
 
 
 // This component uses as the login page.

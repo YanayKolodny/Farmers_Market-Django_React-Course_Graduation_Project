@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../StyleSheets/AuthFilter.css";
 
 // This component is the navigation bar between the login and registrations components
 export default function AuthFilter() {
@@ -10,7 +9,6 @@ export default function AuthFilter() {
 
         <Link to={"/auth"} className="link">
           <button                               // the button uses as link to navigate to the registration component
-            onClick={() => console.log("Works")}
             className="filter_btn_area">
             Register
           </button>
@@ -18,7 +16,7 @@ export default function AuthFilter() {
 
         <Link to={"/auth/login"} className="link">
           <button                               // the button uses as link to navigate to the login component
-            onClick={() => console.log("Works")} className="filter_btn_area">
+            className="filter_btn_area">
             Login
           </button>
         </Link>

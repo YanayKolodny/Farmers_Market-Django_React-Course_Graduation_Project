@@ -1,18 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import "../../StyleSheets/AdminMenuFilter.css";
-import { selectStands, selectFilteredStands, getStandsAsync, standsAreaFilter } from '../../Slices/standsSlice'
-
-import { selectToken, selectUser_id, getProfileAsync } from '../../Slices/loginSlice'
-import { getUserOrdersAsync } from '../../Slices/ordersSlice'
+import { selectToken, selectUser_id } from '../../Slices/loginSlice'
 
 // This component is the navigation bar of the user information component.
 export default function UserMenufilter() {
-  const dispatch = useDispatch()
-  const token = useSelector(selectToken)
-  const user_id = useSelector(selectUser_id)
 
   return (
     <div className="filter_container_2">

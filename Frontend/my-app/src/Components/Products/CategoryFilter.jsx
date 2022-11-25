@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import "../../StyleSheets/CategoryFilter.css";
 import { selectCats } from '../../Slices/categoriesSlice'
 import { productsCategoryFilter } from '../../Slices/productsSlice'
 
@@ -10,7 +9,6 @@ export default function CategoryFilter(props) {
   const dispatch = useDispatch()
   const allCats = useSelector(selectCats)
   const standCats = allCats.filter((cat) => cat.stand_id == props.stand_id["stand_id"])
-  console.log("standCats.length", standCats.length)
 
   return (
     <div className="filter_container_2">

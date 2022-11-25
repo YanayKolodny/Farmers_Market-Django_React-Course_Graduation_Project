@@ -47,16 +47,9 @@ const StandRegistration = () => {
     setAddress(e.target.value);
   };
 
-  // Method to update the Stand's Area useState on change from it's input
-  const handleArea_id = (e) => {
-    e.preventDefault();
-    setArea_id(e.target.value)
-  };
-
   // Method to update the Stand's image useState on change from it's input
   const handleImage = (e) => {
     e.preventDefault();
-    console.log(e.target.files);
     setImage(e.target.files[0]);
   };
 

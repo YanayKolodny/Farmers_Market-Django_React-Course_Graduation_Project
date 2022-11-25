@@ -1,5 +1,4 @@
 import React from 'react'
-import "../../StyleSheets/About.css";
 
 // This component represents the About page - that explains about this project.
 

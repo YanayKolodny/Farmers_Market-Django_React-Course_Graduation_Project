@@ -1,54 +1,49 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  MDBBtn,
-  MDBModal,
-  MDBModalDialog,
-  MDBModalContent,
-  MDBModalHeader,
-  MDBModalTitle,
-  MDBModalBody,
-  MDBModalFooter,
-  MDBInput
-} from 'mdb-react-ui-kit';
 
-import { updateCategoryAsync } from '../../../Slices/categoriesSlice';
+import { updateAreaAsync } from '../../../Slices/areaSlice';
 import { selectToken } from '../../../Slices/loginSlice'
 
-// This component is a modal that contain a form to update categorys of a stand - used by the stand owner.
-export default function UpdateCategoryModal(props) {
+import {
+  MDBBtn, MDBModal, MDBModalDialog,
+  MDBModalContent, MDBModalHeader, MDBModalTitle,
+  MDBModalBody, MDBModalFooter, MDBInput
+} from 'mdb-react-ui-kit';
+
+// This component is a modal that contain a form to update an area's name.
+export default function WebAdminUpdateAreasModal(props) {
   // Design functunality related variables
   const [basicModal, setBasicModal] = useState(false);
   const toggleShow = () => setBasicModal(!basicModal);
 
   const dispatch = useDispatch()
   const token = useSelector(selectToken)
-  const [newCatName, setNewCatName] = useState("")
+  const [newAreaName, setNewAreaName] = useState("")
 
-  const updateAndCloseModalWindow = (cred) => {
-    dispatch(updateCategoryAsync({ category_id: cred.category_id, newCatName: cred.newCatName, token: cred.token }))
+  const updateAndCloseModalWindow = () => {
+    dispatch(updateAreaAsync({ token: token, area_id: props._id, newAreaName: { areaName: newAreaName } }))
     toggleShow()
-    setNewCatName("")
+    setNewAreaName("")
   }
 
   return (
     <>
-      <MDBBtn onClick={toggleShow}>Update This Category</MDBBtn>
+      <MDBBtn onClick={toggleShow}>Update Area's Name</MDBBtn>
       <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
         <MDBModalDialog>
           <MDBModalContent>
             <MDBModalHeader>
-              <MDBModalTitle>{props.categoryName}</MDBModalTitle>
+              <MDBModalTitle>{props.areaName.charAt(0).toUpperCase() + props.areaName.slice(1)}</MDBModalTitle>
               <MDBBtn className='btn-close' color='none' onClick={toggleShow}></MDBBtn>
             </MDBModalHeader>
             <MDBModalBody>
               <form >
-                <p>Type the category's new name:<br />
+                <p>Type the area's new name:<br />
                   <MDBInput
                     type="text"
-                    placeholder={props.categoryName}
+                    placeholder={`Current Name: ${props.areaName}`}
                     id="newCategoryName"
-                    onChange={e => setNewCatName(e.target.value)}
+                    onChange={e => setNewAreaName(e.target.value)}
                   ></MDBInput>
                 </p>
               </form>
@@ -58,7 +53,7 @@ export default function UpdateCategoryModal(props) {
               <MDBBtn color='secondary' onClick={toggleShow}>
                 Close
               </MDBBtn>
-              <MDBBtn onClick={() => dispatch(updateAndCloseModalWindow({ category_id: props._id, newCatName: { categoryName: newCatName }, token: token }))}>
+              <MDBBtn onClick={() => dispatch(updateAndCloseModalWindow())}>
                 Save changes
               </MDBBtn>
             </MDBModalFooter>

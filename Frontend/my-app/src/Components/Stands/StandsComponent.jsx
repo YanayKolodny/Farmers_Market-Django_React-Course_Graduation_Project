@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import { selectProds, getProductsAsync } from '../../Slices/productsSlice'
 import { selectToken } from '../../Slices/loginSlice'
 import { selectStands, selectFilteredStands, getStandsAsync } from '../../Slices/standsSlice'
-import "../../StyleSheets/StandsStylesheet.css";
 import StandCard from './StandCard';
 import AreaFilter from './AreaFilter';
 import { Outlet } from 'react-router-dom';
