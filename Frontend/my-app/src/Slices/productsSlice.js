@@ -37,7 +37,6 @@ export const deleteProductAsync = createAsyncThunk(
   'products/deleteProduct',
   async (cred) => {
     const response = await deleteProduct(cred.token, cred.id);
-    console.log("cred.id", cred.id)
     return cred.id;
   })
 // DELETE Product ENDS
@@ -59,10 +58,7 @@ export const productsSlice = createSlice({
     // Reducer to update the StandProducts and FilteredStandProducts states with the received
     // products from the response:
     StandProductsProvider: (state, action) => {
-      console.log("action.payloadddddd", action.payload)
-
       state.StandProducts = state.AllProds.filter((prod) => prod.stand_id._id == action.payload);
-      console.log("state.StandProducts", state.StandProducts)
       state.FilteredStandProducts = state.StandProducts
     },
     productsCategoryFilter: (state, action) => {
@@ -97,7 +93,6 @@ export const productsSlice = createSlice({
         state.AllProds[index]["price"] = action.payload.price;
         state.AllProds[index]["desc"] = action.payload.desc;
 
-        console.log(JSON.parse(JSON.stringify(state.StandProducts)))
         index = state.StandProducts.findIndex((prod) => { return prod._id == action.payload.id })
         state.StandProducts[index]["prodName"] = action.payload.prodName;
         state.StandProducts[index]["price"] = action.payload.price;

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { GET_STANDS_URL, ADD_STAND_URL, UPDATE_USER_URL, UPDATE_STAND_URL, DELETE_STAND_URL } from './server_urls'
+import { GET_STANDS_URL, ADD_STAND_URL, UPDATE_STAND_URL, DELETE_STAND_URL } from './server_urls'
 
 
 // GET Stands Start - method that calls the server and receives all the stands in respons:

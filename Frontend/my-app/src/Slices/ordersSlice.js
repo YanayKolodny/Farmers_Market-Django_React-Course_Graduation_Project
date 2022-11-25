@@ -42,7 +42,6 @@ export const getStandOrdersAsync = createAsyncThunk(
   'orders/getStandOrders',
   async (cred) => {
     const response = await getStandOrders(cred.token, cred.stand_id);
-    console.log("response.data", response.data)
     return response.data;
   });
 // GET getStandOrdersAsync ENDS
@@ -111,18 +110,15 @@ export const ordersSlice = createSlice({
       // extraReducer to update the OrderProducts state - to show any orders products:
       .addCase(getOrderProductsAsync.fulfilled, (state, action) => {
         state.OrderProducts = action.payload
-        console.log(state.OrderProducts)
       })
       // extraReducer to delete the cart from the local storage - after an order is complete:
       .addCase(createOrderAsync.fulfilled, (state, action) => { // Removing the cart from the local storage after order is made:
         localStorage.removeItem(`cart/user${action.payload.user_id}/stand${action.payload.stand_id}`)
-        console.log("action.payload", action.payload)
         const createdTime = action.payload.createdOrder.createdTime
         const standName = action.payload.createdOrder.stand_id.standName
         const order_id = action.payload.createdOrder._id
 
         state.LastOrderDetails = { createdTime: createdTime, standName: standName, order_id: order_id }
-        console.log("state.LastOrderDetails", state.LastOrderDetails)
 
       })
   },

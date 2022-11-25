@@ -30,13 +30,11 @@ export const standCartSlice = createSlice({
     },
     // addToCart Reducer is adding product to the cart on the local storage and to "CartProds"
     addToCart: (state, action) => {
-      console.log("ADD TO CART user id", action.payload.user_id)
       if (action.payload.newProd.amount < 1) { return }       // Check to see the added amount is more than 0
 
       let addedProd = action.payload.newProd          // Assigning addedProd as variable of the received product
       let stand_id = addedProd.stand_id._id               // Assigning the stand id from the added prod
       let user_id = action.payload.user_id            // Assigning the user id - to save the cart according to the user
-      console.log("ADD TO CART stand id", addedProd)
 
       let localStandCart = JSON.parse(localStorage.getItem(`cart/user${user_id}/stand${stand_id}`))     // Assigning localStandCart as variable of the cart from the local storage
       if (localStandCart == null) {                   // Checking if the cart exist in the local storage - if not, creating it and add the received product to it                             
@@ -74,7 +72,6 @@ export const standCartSlice = createSlice({
     },
     // updProdInCart Reducer is updating the amount of a product in the local storage and on the StandCartProds state:
     updProdInCart: (state, action) => {     // the method recives the product id, the new amount and the stand id
-      console.log(action.payload)
       // Assinining all the attrebutes from the Payload:
       let user_id = action.payload.user_id
       let stand_id = action.payload.stand_id

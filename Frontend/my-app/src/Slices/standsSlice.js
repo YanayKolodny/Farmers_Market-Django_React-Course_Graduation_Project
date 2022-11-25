@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { addStand, getStands, updUserStatus, updateStand, deleteStand } from '../API/standsAPI'
+import { addStand, getStands, updateStand, deleteStand } from '../API/standsAPI'
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 // All the initial states to be used for the stands proccess
@@ -38,7 +38,6 @@ export const addStandAsync = createAsyncThunk(
 export const deleteStandAsync = createAsyncThunk(
   'products/deleteStand',
   async (cred) => {
-    console.log("cred", cred)
     const response = await deleteStand(cred.token, cred.id);
     return cred.id;
   })
@@ -49,7 +48,6 @@ export const updateStandAsync = createAsyncThunk(
   'stands/updateStand',
   async (cred) => {
     const response = await updateStand(cred.stand_id, cred.token, cred.update_data);
-    console.log("response.data", response.data)
     return response.data
   })
 //  UPDATE Stand ENDS
@@ -68,7 +66,6 @@ export const standsSlice = createSlice({
     setAdminStand: (state, action) => {
       let adminInArray = JSON.parse(JSON.stringify(state.AllStands)).filter((stand) => stand.user_id == action.payload)
       state.AdminStand = adminInArray[0]
-      console.log("state.AdminStand", state.AdminStand)
     },
     // The setSellingStandData receives the current stand_id of the stand which is being purchesed from and returnes its data.
     setSellingStandData: (state, action) => {
@@ -85,13 +82,9 @@ export const standsSlice = createSlice({
       })
       // Updating the AllStands with the data that been recived from the addStandsAsync method (a new stand).
       .addCase(addStandAsync.fulfilled, (state, action) => {
-        console.log("AAAAACCCCCTTTTIIIOOONNN", action.payload)
         state.AllStands = JSON.parse(JSON.stringify(state.AllStands.push(action.payload)))
         state.FilteredStands = JSON.parse(JSON.stringify(state.FilteredStands.push(action.payload)))
         state.AdminStand = action.payload
-        console.log("AllStands", state.AllStands)
-        console.log("FilteredStands", state.FilteredStands)
-        console.log("AdminStand", state.AdminStand)
       })
       //  Delete Stand from the AllStands state.
       .addCase(deleteStandAsync.fulfilled, (state, action) => {

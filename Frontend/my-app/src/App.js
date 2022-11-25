@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { selectUserName, selectToken, selectIsStaff, loginOnArrival, getProfileAsync, selectUser_id } from './Slices/loginSlice'
+import { loginOnArrival, getProfileAsync, selectUser_id } from './Slices/loginSlice'
 import { getProductsAsync } from './Slices/productsSlice'
 import { getStandsAsync, selectStands } from './Slices/standsSlice'
 import { getCategoriesAsync } from './Slices/categoriesSlice';

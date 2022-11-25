@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { registerUser, updateProfile } from '../API/registrationAPI'
-import jwt_decode from "jwt-decode";
+import { registerUser } from '../API/registrationAPI'
 
 // All the initial states to be used for the registration proccess 
 const initialState = {
@@ -29,7 +28,6 @@ export const registrationSlice = createSlice({
       .addCase(registerUserAsync.fulfilled, (state, action) => {
         alert("We are very Happy you chose to register! \n Enjoy and let us know if you need anything ;)")
         window.location.href = "http://localhost:3000/auth/login"
-        console.log(state.messege)
       })
   },
 });
@@ -37,5 +35,4 @@ export const registrationSlice = createSlice({
 // All the exports of states and methods of the Registration Slice
 export const { } = registrationSlice.actions;
 export const selectMessege = (state) => state.registration.messege;
-
 export default registrationSlice.reducer;

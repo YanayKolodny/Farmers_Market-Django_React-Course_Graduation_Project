@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { loginUser, logOutUser, getProfile, updateProfile, updUserStatus } from '../API/loginAPI'
-import { useDispatch } from "react-redux";
 import jwt_decode from "jwt-decode";
 
 // All the initial states to be used for the login and profile proccess
@@ -26,7 +25,6 @@ export const loginUserAsync = createAsyncThunk(
   'login/loginUser',
   async (UserCreds) => {
     const response = await loginUser(UserCreds);
-    console.log(response.data)
     localStorage.setItem("authTokens", JSON.stringify(response.data)) // Saving the token to the local storage
     return response.data;
   })
@@ -46,7 +44,6 @@ export const getProfileAsync = createAsyncThunk(
   'login/getProfile',
   async (user_id) => {
     const response = await getProfile(user_id);
-    console.log("response.data", response.data)
     return response.data[0];
   })
 
@@ -80,7 +77,6 @@ export const loginSlice = createSlice({
         state.user_id = jwt_decode(state.token).user_id
         state.is_staff = jwt_decode(state.token).is_staff
         state.is_superuser = jwt_decode(state.token).is_superuser
-        console.log("IsStaff OnArrival", state.is_staff)
         state.logged = true;
       }
     }
@@ -121,13 +117,8 @@ export const loginSlice = createSlice({
         state.phone = action.payload.phone
         state.address = action.payload.address
         state.area_id = action.payload.area_id
-        console.log("state.fullName", state.fullName)
-        console.log("state.phone", state.phone)
-        console.log("state.address", state.address)
-        console.log("state.area_id", state.area_id)
       })
       .addCase(updateProfileAsync.fulfilled, (state, action) => {
-        console.log("action.payload", action.payload)
         state.fullName = action.payload.fullName
         state.phone = action.payload.phone
         state.address = action.payload.address
@@ -136,9 +127,6 @@ export const loginSlice = createSlice({
       .addCase(updUserStatusAsync.fulfilled, (state, action) => {
         state.is_staff = true
         localStorage.removeItem(`authTokens`)
-        console.log("state.logged", state.logged)
-        console.log("state.is_staff", state.is_staff)
-        console.log("state.is_superuser", state.is_superuser)
         alert("Amazing, your stand is ready! \n Please login again to start managing it!")
         window.location.replace("http://localhost:3000/")
       })

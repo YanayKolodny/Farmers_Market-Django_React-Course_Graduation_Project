@@ -39,7 +39,6 @@ export function deleteProduct(token, id) {
 
 // UPDATE Product Start - Update values of product:
 export function updateProduct(token, updProd) {
-  console.log("APi", updProd.id)
   return new Promise((resolve) =>
     axios.patch(UPDATE_PRODUCT_URL + `${updProd.id}/`, updProd, {
       headers: {

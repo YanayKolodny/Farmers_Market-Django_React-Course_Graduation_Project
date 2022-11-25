@@ -16,8 +16,7 @@
   
 .MainDiv h1{
       font-weight: 500;
-      font-size: 2.5vw;
-      
+      font-size: 2.5vw;    
   }
 
 .h1_FarmerMarketOnline {
@@ -38,7 +37,6 @@
     width:50%;
     border: none;
     border-bottom: 2px solid rgba(119, 119, 119, 0.25);
-    
 }
 
 .aboutText{

@@ -4,8 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
 import './index.css';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import CategoriesAdmin from './Components/StandAdmin_Components/CategoriesAdmin';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RegistrationForm from './Components/Authentication_Components/RegistrationForm'
 import LoginForm from './Components/Authentication_Components/LoginForm';
 import StandProductsPage from './Components/Products/StandProductsPage';
@@ -20,15 +19,16 @@ import About from './Components/About/About';
 import UserOrdersPage from './Components/UserInfo_Components/Orders/UserOrdersPage';
 import UserInfo from './Components/UserInfo_Components/UserInfo';
 import UserPersonalInfo from './Components/UserInfo_Components/UserPersonalInfo';
-import OrdersStandAdmin from './Components/StandAdmin_Components/Orders/OrdersStandAdmin';
-import StandInfo from './Components/StandAdmin_Components/StandInfo';
 import CheckOutComplete from './Components/CheckOut/CheckOutComplete';
-import WebAdmin from './Components/Web_Administration/WebAdmin';
-import OrdersWebAdmin from './Components/Web_Administration/WebAdminOrders/OrdersWebAdmin';
-import WebAdminProducts from './Components/Web_Administration/WebAdminProducts/WebAdminProducts';
-import WebAdminGeneral from './Components/Web_Administration/WebAdminGeneral';
-import WebAdminStands from './Components/Web_Administration/WebAdminStands/WebAdminStands';
-import WebAdminAreas from './Components/Web_Administration/WebAdminAreas/WebAdminAreas';
+import WebAdmin from './Components/Web_Administration_Components/WebAdmin';
+import WebAdminProducts from './Components/Web_Administration_Components/WebAdminProducts/WebAdminProducts';
+import WebAdminGeneral from './Components/Web_Administration_Components/WebAdminGeneral';
+import WebAdminStands from './Components/Web_Administration_Components/WebAdminStands/WebAdminStands';
+import WebAdminAreas from './Components/Web_Administration_Components/WebAdminAreas/WebAdminAreas';
+import StandAdminCategories from './Components/StandAdmin_Components/StandAdminCategories';
+import StandAdminInfo from './Components/StandAdmin_Components/StandAdminInfo';
+import StandAdminOrders from './Components/StandAdmin_Components/Orders/StandAdminOrders';
+import WebAdminOrders from './Components/Web_Administration_Components/WebAdminOrders/WebAdminOrders';
 
 
 const container = document.getElementById('root');
@@ -44,36 +44,42 @@ root.render(
             <Route path="" element={<WelcomePage />}></Route>
             <Route path="/about" element={<About />}></Route>
 
-            <Route path="/standregister" element={<StandRegistration />} />
+            {/* Authentication related components: */}
+            <Route path="/auth" element={<Auth />}>
+              <Route path="" element={<RegistrationForm />}></Route>
+              <Route path="login" element={<LoginForm />}></Route>
+            </Route>
+            <Route path="standregister" element={<StandRegistration />} />
+
+            {/* Stands, Products and order related components - the path to complete a purchase: */}
             <Route path="/allstands" element={<StandsComponent />} />
             <Route path="/shoppingprods/:stand_id" element={<StandProductsPage />} />
             <Route path="/checkoutpage/:stand_id" element={<CheckoutComponent />} />
             <Route path="/checkoutcomplete" element={<CheckOutComplete />} />
 
-            <Route path="/auth" element={<Auth />}>
-              <Route path="" element={<RegistrationForm />}></Route>
-              <Route path="login" element={<LoginForm />}></Route>
-            </Route>
-
+            {/* User profile related component: */}
             <Route path="/userinfo" element={<UserInfo />} >
               <Route path="" element={<UserPersonalInfo />} />
               <Route path="userorders" element={<UserOrdersPage />} />
             </Route>
 
+            {/* Stand Administration related components: */}
             <Route path="/standadmin" element={<StandAdmin />} >
-              <Route path="" element={<StandInfo />} />
+              <Route path="" element={<StandAdminInfo />} />
               <Route path="productsadmin" element={<StandProductsAdmin />} />
-              <Route path="categoriesadmin" element={<CategoriesAdmin />} />
-              <Route path="ordersadmin" element={<OrdersStandAdmin />} />
+              <Route path="categoriesadmin" element={<StandAdminCategories />} />
+              <Route path="ordersadmin" element={<StandAdminOrders />} />
             </Route>
 
+            {/* Superuser/Web Admin related components: */}
             <Route path="/webadmin" element={<WebAdmin />} >
               <Route path="" element={<WebAdminGeneral />} />
               <Route path="areaswebadmin" element={<WebAdminAreas />} />
               <Route path="standswebadmin" element={<WebAdminStands />} />
               <Route path="productswebadmin" element={<WebAdminProducts />} />
-              <Route path="orderswebadmin" element={<OrdersWebAdmin />} />
+              <Route path="orderswebadmin" element={<WebAdminOrders />} />
             </Route>
+
           </Route>
         </Routes>
       </BrowserRouter>

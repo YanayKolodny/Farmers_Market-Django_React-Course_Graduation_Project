@@ -51,7 +51,6 @@ export function getOrderProducts(token, order_id) {
 
 // Create Order Start - Ordering from a stand:
 export function createOrder(token, order) {
-  console.log(token, order, "API TEST")
   return new Promise((resolve) =>
     axios.post(ADD_ORDER_URL, order, {
       headers: {

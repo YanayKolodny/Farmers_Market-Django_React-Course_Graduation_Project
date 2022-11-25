@@ -1,12 +1,34 @@
 .App {
   position: relative;
   box-sizing: border-box;
-  
 }
 
 .MainContainer {
   min-height: 100vh;
 }
+
+/* Importing all the css files from the stylesheets folder: */
+@import url("./StyleSheets/About.css");
+@import url("./StyleSheets/AdminMenuFilter.css");
+@import url("./StyleSheets/AdminProducts.css");
+@import url("./StyleSheets/AdminStands.css");
+@import url("./StyleSheets/AreaFilter.css");
+@import url("./StyleSheets/AuthFilter.css");
+@import url("./StyleSheets/CategoryFilter.css");
+@import url("./StyleSheets/CheckOutComponent.module.css");
+@import url("./StyleSheets/CheckOutSuccess.css");
+@import url("./StyleSheets/Footer.css");
+@import url("./StyleSheets/Header.css");
+@import url("./StyleSheets/LoginStyles.module.css");
+@import url("./StyleSheets/Orders.css");
+@import url("./StyleSheets/Products.css");
+@import url("./StyleSheets/RegStyles.module.css");
+@import url("./StyleSheets/StandsStylesheet.css");
+@import url("./StyleSheets/UpdateCategoryModal.module.css");
+@import url("./StyleSheets/UpdateProductModal.module.css");
+@import url("./StyleSheets/WelcomePage.module.css");
+
+
 
 
 
