@@ -62,7 +62,6 @@ $ cd Farmers_Market-Django_React-Course_Graduation_Project/Backend/
 
 	Windows:			       		Mac:
 $ pip install virtualenv		|	$ pip3 install virtualenv
-$ pip install virtualenv		|	$ pip3 install virtualenv
 $ python -m virtualenv myenv		|	$ python3 -m virtualenv myenv
 $ myenv\Scripts\activate		|	$ source myenv/bin/activate
 $ pip install -r requirements.txt	|	$ pip3 install -r requirements.txt
