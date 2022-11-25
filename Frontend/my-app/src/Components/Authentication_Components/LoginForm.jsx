@@ -5,7 +5,6 @@ import {
   MDBCol, MDBCard, MDBCardBody,
   MDBInput
 } from 'mdb-react-ui-kit';   // Package that provide designs for this component
-import styles from '../../StyleSheets/LoginStyles.module.css';
 
 import { loginUserAsync } from '../../Slices/loginSlice'
 
@@ -19,38 +18,38 @@ export default function LoginForm() {
 
   return (
     <div>
-      <div className={styles.loginPageContainer}>
+      <div className={"loginPageContainer"}>
         <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden' style={{ position: "relative", top: "-20px" }}>
           <MDBRow className='align-items-center justify-content-center'>
 
             <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
 
               {/* This div represents the Written labels on the right side of the page */}
-              <div className={styles.titlesContainer}>
+              <div className="titlesContainer">
                 <h1 className="my-5 display-3 fw-bold ls-tight px-3">
-                  <span className={styles.welcomeBackTitle} >Welcome Back to the</span>
+                  <span className="welcomeBackTitle" >Welcome Back to the</span>
                   <br />
-                  <span className={styles.farmersMarketTitle}>Farmer's Market Online</span>
+                  <span className="farmersMarketTitle">Farmer's Market Online</span>
                 </h1>
 
-                <p className={styles.smallTitleContainer}><b>
-                  <span className={styles.smallTitleWhite}>
+                <p className="smallTitleContainer"><b>
+                  <span className="smallTitleWhite">
                     Where the</span>
-                  <span className={styles.SmallTitleRed}> Best Quality</span>
+                  <span className="SmallTitleRed"> Best Quality</span>
                   <br />
-                  <span className={styles.smallTitleWhite}> Meets the </span>
-                  <span className={styles.SmallTitleRed}>Best Price</span></b></p>
+                  <span className="smallTitleWhite"> Meets the </span>
+                  <span className="SmallTitleRed">Best Price</span></b></p>
               </div>
 
             </MDBCol>
 
             {/* This div represents the form on the left side of the screen */}
-            <div className={styles.loginFormContainer}>
+            <div className="loginFormContainer">
               <MDBCol md='6' className='position-relative'>
                 <div id="radius-shape-1" className="position-relative rounded-circle shadow-5-strong"></div>
                 <div id="radius-shape-2" className="position-relative shadow-5-strong"></div>
 
-                <div className={styles.loginCardContainer}>
+                <div className="loginCardContainer">
                   <MDBCard className='my-5 bg-glass' style={{ backgroundColor: "rgba(135, 206, 250, 0.5)" }}>
                     <MDBCardBody className='p-5'>
                       <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text' onChange={e => setUserName(e.target.value)} />

@@ -1,8 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { useEffect, useState } from 'react';
-import { selectProds, getProductsAsync } from '../../Slices/productsSlice'
-import { selectToken } from '../../Slices/loginSlice'
-import { selectStands, selectFilteredStands, getStandsAsync } from '../../Slices/standsSlice'
+import { useEffect } from 'react';
+import { getProductsAsync } from '../../Slices/productsSlice'
+import { selectFilteredStands, getStandsAsync } from '../../Slices/standsSlice'
 import StandCard from './StandCard';
 import AreaFilter from './AreaFilter';
 import { Outlet } from 'react-router-dom';
@@ -11,9 +10,7 @@ import { Outlet } from 'react-router-dom';
 // This component shows and allow to choose any stand the user wish to see it's products and information.
 const StandsComponent = () => {
   const dispatch = useDispatch()
-  const allStands = useSelector(selectStands)
   const FilteredStands = useSelector(selectFilteredStands)  // The stands objects according to the selected area
-  const token = useSelector(selectToken)
 
   // useEffect to get all the stands data:
   useEffect(() => {

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { loginOnArrival, getProfileAsync, selectUser_id } from './Slices/loginSlice'
 import { getProductsAsync } from './Slices/productsSlice'
-import { getStandsAsync, selectStands } from './Slices/standsSlice'
+import { getStandsAsync } from './Slices/standsSlice'
 import { getCategoriesAsync } from './Slices/categoriesSlice';
 
 import './App.css';

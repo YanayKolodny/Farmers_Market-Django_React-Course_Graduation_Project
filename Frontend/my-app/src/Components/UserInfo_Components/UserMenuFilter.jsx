@@ -1,8 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
-
-import { selectToken, selectUser_id } from '../../Slices/loginSlice'
 
 // This component is the navigation bar of the user information component.
 export default function UserMenufilter() {

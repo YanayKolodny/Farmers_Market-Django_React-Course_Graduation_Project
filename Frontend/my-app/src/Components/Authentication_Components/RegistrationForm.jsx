@@ -1,16 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 import { // Package that provide designs for this component
   MDBBtn, MDBContainer, MDBRow,
   MDBCol, MDBCard, MDBCardBody,
-  MDBInput, MDBCheckbox, MDBIcon,
+  MDBInput
 } from 'mdb-react-ui-kit';
-import styles from '../../StyleSheets/RegStyles.module.css';
 
 import { registerUserAsync } from '../../Slices/registrationSlice';
-import AuthFilter from './AuthFilter';
-import Header from '../Header/Header';
 
 // This component uses as the registration page.
 export default function RegistrationForm() {
@@ -28,27 +25,27 @@ export default function RegistrationForm() {
 
   return (
 
-    <div className={styles.registrationPageContainer} >
+    <div className="registrationPageContainer" >
       <div >
         <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden' style={{ position: "relative", top: "-20px" }}>
           <MDBRow>  {/* This tag represents the Written labels on the left side of the page */}
             <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center' >
               <div style={{ position: "relative", top: "-30px" }}>
                 <h1 className="my-5 display-3 fw-bold ls-tight px-3">
-                  <div className={styles.H1_DIV_ALIGN}>
-                    <span className={styles.REG_PAGE_TITLE} >Welcome to the</span>
+                  <div className="H1_DIV_ALIGN">
+                    <span className="REG_PAGE_TITLE" >Welcome to the</span>
                     <br />
-                    <span className={styles.FMO_REG_PAGE_TITLE}>Farmer's Market Online</span>
+                    <span className="FMO_REG_PAGE_TITLE">Farmer's Market Online</span>
                   </div>
                 </h1>
 
-                <p className={styles.SMALL_TITLE_MAIN}><b>
-                  <span className={styles.SMALL_TITLE_WHITE}>
+                <p className="SMALL_TITLE_MAIN"><b>
+                  <span className="SMALL_TITLE_WHITE">
                     Where the</span>
-                  <span className={styles.SMALL_TITLE_RED}> Best Quality</span>
+                  <span className="SMALL_TITLE_RED"> Best Quality</span>
                   <br />
-                  <span className={styles.SMALL_TITLE_WHITE}> Meets the </span>
-                  <span className={styles.SMALL_TITLE_RED}>Best Price</span></b></p>
+                  <span className="SMALL_TITLE_WHITE"> Meets the </span>
+                  <span className="SMALL_TITLE_RED">Best Price</span></b></p>
               </div>
             </MDBCol>
 
@@ -105,4 +102,3 @@ export default function RegistrationForm() {
     </div>
   );
 }
-{/* Taken From: https://mdbootstrap.com/docs/react/extended/login-form/#! */ }

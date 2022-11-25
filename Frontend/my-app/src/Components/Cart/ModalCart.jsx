@@ -1,11 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 
 import CartCounter from "../Header/CartCounter";
-import {
-  selectStandCartProds, delFromCart, updProdInCart, selectTotalPrice
-} from "../../Slices/standCartSlice";
+import { selectStandCartProds, delFromCart, updProdInCart } from "../../Slices/standCartSlice";
 
 import { selectUser_id } from "../../Slices/loginSlice";
 import {
@@ -13,8 +11,6 @@ import {
   MDBModalBody, MDBModalContent, MDBModalDialog,
   MDBRow, MDBCard, MDBCardBody
 } from "mdb-react-ui-kit";
-import "../../StyleSheets/Header.css";
-import styles from '../../StyleSheets/CheckOutComponent.module.css'
 import { BsTrash } from "react-icons/bs";
 
 // This component shows the cart and is presented in a modal form.
@@ -89,7 +85,7 @@ export default function ModalCart() {
                                         &nbsp;<input
                                           type="number"
                                           defaultValue={prod.amount}
-                                          className={styles.ProductAmountInput}
+                                          className="ProductAmountInput"
                                           onChange={(e) =>
                                             dispatch(
                                               updProdInCart({
@@ -122,12 +118,12 @@ export default function ModalCart() {
                                             })
                                           )
                                         }
-                                        className={styles.TrashButton}
-                                      >
+                                        className="TrashButton">
                                         <BsTrash />
                                       </MDBBtn>
                                     </MDBCol>
                                   </MDBRow>
+
                                 </MDBCardBody>
                               </MDBCard>
                             </div>

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import {
   MDBBtn, MDBModal, MDBModalDialog,
   MDBModalContent, MDBModalHeader, MDBModalTitle,
   MDBModalBody, MDBModalFooter, MDBInput,
 } from 'mdb-react-ui-kit';
 
-import styles from '../../../StyleSheets/UpdateProductModal.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateProductAsync } from '../../../Slices/productsSlice';
 import { selectToken } from '../../../Slices/loginSlice';
@@ -53,7 +52,7 @@ export default function UpdateProductModal(props) {
             </MDBModalHeader>
             <MDBModalBody>
               <form >
-                <p className={styles.IntructionsText}>Fill this field to set a new product name:<br />
+                <p className="IntructionsText">Fill this field to set a new product name:<br />
                   <MDBInput
                     type="text"
                     defaultValue={prodName}
@@ -62,7 +61,7 @@ export default function UpdateProductModal(props) {
                     onChange={e => setProdName(e.target.value)}
                   ></MDBInput>
                 </p>
-                <p className={styles.IntructionsText}>Fill this field to set a new price:<br />
+                <p className="IntructionsText">Fill this field to set a new price:<br />
                   <MDBInput
                     type="number"
                     defaultValue={parseInt(price)}
@@ -71,7 +70,7 @@ export default function UpdateProductModal(props) {
                     onChange={e => setPrice(parseInt(e.target.value))}
                   ></MDBInput>
                 </p>
-                <p className={styles.IntructionsText}>Fill this field to set a new description of the product:<br />
+                <p className="IntructionsText">Fill this field to set a new description of the product:<br />
                   <MDBInput
                     type="text"
                     defaultValue={desc}
@@ -80,7 +79,7 @@ export default function UpdateProductModal(props) {
                     onChange={e => setDesc(e.target.value)}
                   ></MDBInput>
                 </p>
-                <p className={styles.IntructionsText}>Is this product in stock:<br />
+                <p className="IntructionsText">Is this product in stock:<br />
                   <select id="area" name="areaslist" style={{ display: "flex", justifyContent: "center" }} onChange={e => setInStock(e.target.value)} >
                     {inStock === true ?
                       (<option value={1} disabled selected hidden>Yes - in stock</option>)
