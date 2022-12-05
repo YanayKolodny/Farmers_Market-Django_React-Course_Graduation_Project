@@ -3,7 +3,7 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Link to live website](#live-web)
+* [Link to live website](#LinkToLiveWebsite)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Pages Examples](#pagesexamples)
