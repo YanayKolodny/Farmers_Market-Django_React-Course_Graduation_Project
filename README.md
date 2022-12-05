@@ -3,6 +3,7 @@
 
 ## Table of contents
 * [General info](#general-info)
+* [Link to live website](#live-web)
 * [Technologies](#technologies)
 * [Features](#features)
 * [Pages Examples](#pagesexamples)
@@ -12,6 +13,9 @@
 This project has created by Yanay Kolodny and Michael Stern on october-november of 2022. 
 It is our graduation project from John Bryce College in Tel Aviv - a Full-Stack Python Course.
 The Farmer's Market Online is a market where user's can serve both as costumer and as "stand" owners, where they can sell their goods.
+
+## Link to live website:
+https://farmersmarketonline.netlify.app/
 
 ## Technologies:
 Project is created with:
