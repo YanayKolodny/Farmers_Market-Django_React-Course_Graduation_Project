@@ -3,10 +3,10 @@
 
 ## Table of contents
 * [General info](#general-info)
-* [Link to live website](#LinkToLiveWebsite)
+* [Link to live website](#link-to-live-website)
 * [Technologies](#technologies)
 * [Features](#features)
-* [Pages Examples](#pagesexamples)
+* [Pages Examples](#pages-examples)
 * [Setup](#setup)
 
 ## General info
