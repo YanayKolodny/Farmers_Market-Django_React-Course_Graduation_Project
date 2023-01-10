@@ -28,8 +28,8 @@ const UserPersonalInfo = () => {
 
   return (
 
-    <div >
-      <MDBCard className='my-5 bg-glass' style={{ backgroundColor: "rgba(135, 206, 250, 0.5)", alignItems: "center" }}>
+    <div>
+      <MDBCard className=' bg-glass' style={{ backgroundColor: "rgba(241,229,214,0.7)", alignItems: "center", justifyContent: "center", minHeight: "100vh" }}>
         <MDBCol md='6' className='p-5 '>
 
           <MDBInput wrapperClass='mb-4' label='Full Name' placeholder={fullName} id='form1' onChange={e => setFullName(e.target.value)} />
@@ -48,7 +48,10 @@ const UserPersonalInfo = () => {
           </select><br />
 
           {/* The button to execute the login action using the loginUserAsync method */}
-          <MDBBtn className='w-100 mb-4' size='md'
+          <MDBBtn
+            className='w-100 mb-4'
+            size='md'
+            style={{ backgroundColor: "rgb(116,108,92)" }}
             onClick={() => dispatch(updateProfileAsync(
               {
                 user_id: user_id,

@@ -1,14 +1,12 @@
-
 .welcomePageContainer {
   position: relative;
   box-sizing: border-box;
-  
 }
 
 .backgroundImageContainer {
-  background-image: url('../../public/BackgroundPhotos/welcomePageLeftDesign.jpeg');
+  background-image: url("../../public/BackgroundPhotos/welcomePageLeftDesign.jpeg");
   position: absolute;
-  width: 100%; 
+  width: 100%;
   height: 100vh;
 }
 
@@ -16,7 +14,6 @@
   float: right;
   width: 81%;
   height: 100%;
-  
 }
 
 .mainTitleContainer {
@@ -29,7 +26,7 @@
   position: absolute;
   font-family: "Apple Chancery", serif;
   font: weight 400px;
-  font-size: 7.5vw; 
+  font-size: 7.5vw;
   top: 100%;
   left: 7.6%;
   color: rgb(0, 0, 0);
@@ -48,7 +45,7 @@
   padding: 7%;
   height: 50%;
   width: 18%;
-  font-family: "Apple Chancery", serif;;
+  font-family: "Apple Chancery", serif;
 }
 
 .welcomeTitle {
@@ -64,50 +61,47 @@
 }
 
 .btnsContainer {
-position:absolute;
-width: 100%;
-height: 20%;
-bottom: 15%;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 15%;
 }
 
-.aboutBtn{
+.aboutBtn {
   position: absolute;
   width: 10%;
   left: 35%;
 }
 
-.goToShopBtn{
+.goToShopBtn {
   position: absolute;
   width: 10%;
   left: 57.5%;
 }
 
-.registerBtn{
+.registerBtn {
   position: absolute;
   width: 10%;
   left: 90%;
 }
 
-.loginBtn{
+.loginBtn {
   position: absolute;
   width: 10%;
   left: 80%;
 }
 
-.manageStandBtn{
+.manageStandBtn {
   position: absolute;
   width: 10%;
   left: 80%;
 }
 
-.registerStandBtn{
+.registerStandBtn {
   position: absolute;
   width: 10%;
   left: 80%;
 }
-
- 
-
 
 .button_btn {
   background-color: rgba(0, 0, 0);
@@ -126,7 +120,7 @@ bottom: 15%;
   font-size: 1rem;
   line-height: 23px;
   outline: none;
-  padding: .75rem;
+  padding: 0.75rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
   /* border-bottom-left-radius: 15px 255px;
@@ -140,13 +134,13 @@ bottom: 15%;
 }
 
 .button_btn:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
 .button_btn:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
-}  
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
+}
 
 .footerContainer {
   position: absolute;
@@ -191,8 +185,6 @@ bottom: 15%;
 .button_btn:focus {
   box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
 } */
-
-
 
 /* .button_btn {
   background-color: rgba(247, 244, 236, 0.949);

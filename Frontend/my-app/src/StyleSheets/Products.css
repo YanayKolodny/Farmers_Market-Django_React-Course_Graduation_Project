@@ -77,7 +77,7 @@
 }
 
 .buy_button {
-  background-color: #8fc700;
+  background-color: rgb(116, 108, 92);
 }
 
 .add_button {
@@ -85,21 +85,16 @@
 }
 
 .buy_button:hover {
-  background-color: #7fb002;
+  background-color: rgba(116, 108, 92, 0.807);
 }
 
 .add_button:hover {
   background-color: #ff8000;
 }
 
+.buy_button_outOfStock {
+}
+
 .buy_icon {
   font-size: 18px;
 }
-
-
-
-
-
-
-
-

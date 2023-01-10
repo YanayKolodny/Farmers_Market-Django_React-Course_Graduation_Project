@@ -1,17 +1,17 @@
 .loginPageContainer {
   position: relative;
-  background-image: url('../../public/BackgroundPhotos/LoginPageBackgound.jpeg');
+  background-image: url("../../public/BackgroundPhotos/LoginPageBackgound.jpeg");
   background-repeat: no-repeat;
-  background-size: cover; 
+  background-size: cover;
   min-height: 100vh;
   min-width: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  }
+}
 
 /* H1 Title on the left of the registration page START */
-.titlesContainer{
+.titlesContainer {
   width: fit-content;
   text-align: center;
 }
@@ -24,43 +24,41 @@
   width: 50%;
 }
 
-.welcomeBackTitle{
+.welcomeBackTitle {
   color: hsl(218, 81%, 95%);
   font-family: Comic Sans MS;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
-.farmersMarketTitle{
+.farmersMarketTitle {
   color: hsl(110, 80%, 56%) !important;
   font-family: Comic Sans MS;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
-
 
 /* P Small title on the left of the registration page START */
-.smallTitleContainer{
+.smallTitleContainer {
   font-family: Comic Sans MS;
-  font-size: 35px; 
-  text-align: center
+  font-size: 35px;
+  text-align: center;
 }
 
-.smallTitleWhite{
+.smallTitleWhite {
   color: hsl(218, 81%, 95%);
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
-.SmallTitleRed{
+.SmallTitleRed {
   color: hsl(6, 98%, 50%);
-  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255), -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255)
+  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
 }
 /* P Small title on the left of the registration page END */
 
-
-
-.loginCardContainer {
-
+.loginInput {
+  background-color: "rgba(245, 226, 191,0.9)";
+  color: "black";
 }
-
-
-
-

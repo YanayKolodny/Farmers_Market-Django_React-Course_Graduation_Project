@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteProductAsync } from '../../../Slices/productsSlice'
 import { selectToken } from '../../../Slices/loginSlice'
+import { URL } from '../../../API/server_urls'
 
 import { MDBBtn, } from 'mdb-react-ui-kit';
 
@@ -14,7 +15,7 @@ export default function WebAdminProductsCard(props) {
     <div >
       <div key={props._id} className="box" style={{ maxWidth: "210px", height: "350px" }}>
 
-        <img className="product_img" src={`http://127.0.0.1:8000${props.image}`} alt="product" />
+        <img className="product_img" src={`${URL}${props.image}`} alt="product" />
         <div className="standContent">
 
           <div className="standTitle">

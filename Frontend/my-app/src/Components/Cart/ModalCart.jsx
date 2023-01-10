@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
+import { URL } from "../../API/server_urls";
 
 import CartCounter from "../Header/CartCounter";
 import { selectStandCartProds, delFromCart, updProdInCart } from "../../Slices/standCartSlice";
@@ -56,7 +57,7 @@ export default function ModalCart() {
                                     <div class="col-md-2">
                                       &emsp;{" "}
                                       <img
-                                        src={`http://127.0.0.1:8000${prod.image}`}
+                                        src={`${URL}${prod.image}`}
                                         class="img-fluid width-10px"
                                         alt="Phone"
                                         style={{ maxWidth: "50px" }}
@@ -152,7 +153,13 @@ export default function ModalCart() {
                     </p>
                   </div>
                   {standCartProds.length > 0 &&
-                    <Link to={`/checkoutpage/${standCartProds[0].stand_id._id}`}><MDBBtn>CheckOut</MDBBtn></Link>}
+                    <Link
+                      to={`/checkoutpage/${standCartProds[0].stand_id._id}`}>
+                      <MDBBtn
+                        style={{ backgroundColor: "rgb(116,108,92)" }}>
+                        CheckOut
+                      </MDBBtn>
+                    </Link>}
 
                 </MDBModalBody>
               </MDBModalContent>

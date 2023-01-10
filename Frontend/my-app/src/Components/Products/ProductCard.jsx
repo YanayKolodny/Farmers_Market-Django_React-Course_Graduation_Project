@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { URL } from '../../API/server_urls'
 import { ToastContainer, toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -14,7 +15,7 @@ export default function ProductCard(props) {
   const [amount, setAmount] = useState(1)
   const user_id = useSelector(selectUser_id)
   const logged = useSelector(selectLogged)
-
+  // console.log("${URL}${props}", props)
   const logeinToBuy = () => toast("Please Register/Login if you wish to add products to the cart", { className: 'toast-message' });
 
   return (
@@ -31,7 +32,7 @@ export default function ProductCard(props) {
         <div>
           <img className="product_img"
             style={{ maxWidth: "250px", maxHeight: "200px", minHeight: "200px" }}
-            src={`http://127.0.0.1:8000${props.image}`}
+            src={`${URL}${props.image}`}
             alt="product" />
         </div>
 
@@ -49,9 +50,12 @@ export default function ProductCard(props) {
             <span>{props.desc}</span>
           </div>
 
-          <div>
-            <span>How Many: <input type="number" placeholder={1} style={{ width: "40px" }} onChange={(e) => setAmount(parseInt(e.target.value))}></input>{"   "}</span>
-          </div>
+          {props.inStock && (
+            <div>
+              <span>How Many: <input type="number" placeholder={1} style={{ width: "40px" }} onChange={(e) => setAmount(parseInt(e.target.value))}></input>{"   "}</span>
+            </div>
+          )}
+
         </div>
 
         {/* If the user is logged the "add to cart" button will add the product to the cart,
@@ -77,7 +81,7 @@ export default function ProductCard(props) {
             Add to Cart
             <FiShoppingCart className="buy_icon" />
           </button>) : (
-            <button className="products_button buy_button" style={{ backgroundColor: "#a5a998" }}>Out Of Stock</button>
+            <button className="products_button buy_button" style={{ backgroundColor: "#a5a998", cursor: "not-allowed" }}>Out Of Stock</button>
           )}
         </div>
         )

@@ -50,13 +50,13 @@ export default function LoginForm() {
                 <div id="radius-shape-2" className="position-relative shadow-5-strong"></div>
 
                 <div className="loginCardContainer">
-                  <MDBCard className='my-5 bg-glass' style={{ backgroundColor: "rgba(135, 206, 250, 0.5)" }}>
+                  <MDBCard className='my-5 bg-glass' style={{ backgroundColor: "rgba(241,229,214,0.7)" }}>
                     <MDBCardBody className='p-5'>
-                      <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text' onChange={e => setUserName(e.target.value)} />
+                      <MDBInput wrapperClass='mb-4' label='Username' id='form1' type='text' className='loginInput' onChange={e => setUserName(e.target.value)} />
                       <MDBInput wrapperClass='mb-4' label='Password' id='form3' type='password' onChange={e => setPassword(e.target.value)} />
 
                       {/* The button to execute the login action using the loginUserAsync method */}
-                      <MDBBtn className='w-100 mb-4' size='md'
+                      <MDBBtn className='w-100 ' size='md' style={{ backgroundColor: "rgb(116,108,92)" }}
                         onClick={() => dispatch(loginUserAsync({
                           username: UserName,
                           password: Password

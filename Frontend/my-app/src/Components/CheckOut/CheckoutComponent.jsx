@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, NavLink, Link } from "react-router-dom";
+import { URL } from "../../API/server_urls";
 
 import {
   MDBBtn, MDBCard, MDBCardBody,
@@ -77,7 +78,7 @@ export default function CheckoutComponent() {
 
                               <div>
                                 <MDBCardImage
-                                  src={`http://127.0.0.1:8000${prod.image}`}
+                                  src={`${URL}${prod.image}`}
                                   fluid className="rounded-3" style={{ width: "65px" }}
                                   alt="Shopping item" />
                               </div>
@@ -134,8 +135,8 @@ export default function CheckoutComponent() {
                   </MDBCol>
 
                   <MDBCol lg="5">
-                    <MDBCard className="bg-primary text-white rounded-3">
-                      <MDBCardBody>
+                    <MDBCard className=" text-black " >
+                      <MDBCardBody style={{ backgroundColor: "rgba(245, 226, 191)" }}>
                         <div className="d-flex justify-content-between align-items-center mb-4">
                           <MDBTypography tag="h5" className="mb-0">
                             Card details
@@ -144,14 +145,26 @@ export default function CheckoutComponent() {
 
                         <div>
                           <p className="large">Card type:</p>
-                          <a href="#!" type="submit" className="text-white">
-                            <MDBBtn className="CardTypeBtns"> <FaCcMastercard /></MDBBtn>
+                          <a href="#!">
+                            <MDBBtn
+                              className="CardTypeBtns"
+                              style={{ backgroundColor: "rgba(245, 226, 191)", borderColor: "transparent" }}>
+                              <FaCcMastercard />
+                            </MDBBtn>
                           </a>
-                          <a href="#!" type="submit" className="text-white">
-                            <MDBBtn className="CardTypeBtns"><FaCcVisa /></MDBBtn>
+                          <a href="#!">
+                            <MDBBtn
+                              className="CardTypeBtns"
+                              style={{ backgroundColor: "rgba(245, 226, 191)", borderColor: "transparent" }}>
+                              <FaCcVisa />
+                            </MDBBtn>
                           </a>
-                          <a href="#!" type="submit" className="text-white">
-                            <MDBBtn className="CardTypeBtns"><FaCcPaypal /></MDBBtn>
+                          <a href="#!">
+                            <MDBBtn
+                              className="CardTypeBtns"
+                              style={{ backgroundColor: "rgba(245, 226, 191)", borderColor: "transparent" }}>
+                              <FaCcPaypal />
+                            </MDBBtn>
                           </a>
                         </div>
 
@@ -193,7 +206,9 @@ export default function CheckoutComponent() {
 
                         {logged ? (
                           <NavLink to={'/checkoutcomplete'}>
-                            <MDBBtn color="info" block size="lg"
+                            <MDBBtn
+                              block size="lg"
+                              style={{ backgroundColor: "#39739d" }}
                               onClick={() => checkOutAndUpdates()}>
                               Checkout
                             </MDBBtn>

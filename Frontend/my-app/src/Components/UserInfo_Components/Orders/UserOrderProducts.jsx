@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { selectToken } from '../../../Slices/loginSlice'
 import { getOrderProductsAsync, selectOrderProducts } from '../../../Slices/ordersSlice'
+import { URL } from '../../../API/server_urls'
 
 import {
   MDBCol, MDBCardBody, MDBRow,
   MDBCard, MDBModal, MDBModalBody,
   MDBModalContent, MDBModalDialog, MDBTypography,
-
 } from "mdb-react-ui-kit";
 import { Button } from "@mui/material";
 
@@ -62,7 +62,7 @@ export default function UserOrderProducts(props) {
 
                                 <MDBRow style={{ fontSize: "18px" }}>
                                   <div class="col-md-2">&emsp;
-                                    <img src={`http://127.0.0.1:8000${prod.prod_id.image}`}
+                                    <img src={`${URL}${prod.prod_id.image}`}
                                       class="img-fluid width-10px" alt="Phone" style={{ maxWidth: "50px" }}
                                     />
                                   </div>

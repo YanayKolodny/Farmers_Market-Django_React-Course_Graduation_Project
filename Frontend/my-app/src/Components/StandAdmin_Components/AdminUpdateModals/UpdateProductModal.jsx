@@ -41,7 +41,11 @@ export default function UpdateProductModal(props) {
   return (
     <>
       <div >
-        <MDBBtn style={{ width: "290px", borderRadius: "20px", border: "2px solid", borderColor: "white" }} onClick={toggleShow}>Update This Product</MDBBtn>
+        <MDBBtn
+          style={{ width: "290px", borderRadius: "20px", border: "2px solid", borderColor: "white" }}
+          onClick={toggleShow}>
+          Update Product
+        </MDBBtn>
       </div>
       <MDBModal show={basicModal} setShow={setBasicModal} tabIndex='-1'>
         <MDBModalDialog>

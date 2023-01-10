@@ -46,15 +46,14 @@ export default function Header() {
               <IconButton>
                 <AgricultureOutlinedIcon
                   sx={{ fontSize: 33 }}
-                  color="secondary"
                 />
               </IconButton>
             </Tooltip>
           </Link>
 
-          <div style={{ position: "relative", left: "110px" }}>
+          <div style={{ position: "relative" }}>
             <Link to={"/"} style={{ textDecoration: "none" }}>
-              <h1 style={{ position: "relative" }}>
+              <h1 style={{ textDecoration: "none", position: "relative", left: "18%" }}>
                 <span style={{ fontSize: "40px" }} className='h1_FarmerMarketOnline'>Farmer's Market
                   <span className='h1_Online '> Online</span
                   ></span>
@@ -70,7 +69,7 @@ export default function Header() {
             {/* if the user is not logged, show the login/registration buttons, els show the logout button */}
             {logged ? (
               <>
-                <Avatar sx={{ bgcolor: deepPurple[400], color: "rgba(241,229,214,255)", width: "160px", borderRadius: "20%" }} >
+                <Avatar sx={{ bgcolor: "rgb(116,108,92)", color: "rgba(241,229,214,255)", width: "160px", borderRadius: "20%" }} >
                   Hello {username.charAt(0).toUpperCase() + username.slice(1)}
                 </Avatar>
 
@@ -82,7 +81,7 @@ export default function Header() {
                       <IconButton>
                         <LogoutOutlinedIcon
                           sx={{ fontSize: 33 }}
-                          color="secondary" />
+                          color="rgb(116,108,92)" />
                       </IconButton>
                     </Tooltip>
                   </button>
@@ -94,7 +93,7 @@ export default function Header() {
                       <IconButton onClick={() => dispatch(getProfileAsync(user_id))}>
                         <AccountCircleIcon
                           sx={{ fontSize: 33 }}
-                          color="secondary"
+                          color="rgb(116,108,92)"
                         />
                       </IconButton>
                     </Tooltip>
@@ -107,7 +106,7 @@ export default function Header() {
                     <IconButton>
                       <LoginOutlinedIcon
                         sx={{ fontSize: 33 }}
-                        color="secondary"
+                        color="rgb(116,108,92)"
                       />
                     </IconButton>
                   </Tooltip>
@@ -116,7 +115,7 @@ export default function Header() {
                 <Link to={"/auth"} className="Link">
                   <Tooltip title="Signup">
                     <IconButton>
-                      <CreateIcon sx={{ fontSize: 33 }} color="secondary" />
+                      <CreateIcon sx={{ fontSize: 33 }} color="rgb(116,108,92)" />
                     </IconButton>
                   </Tooltip>
                 </Link>
@@ -129,7 +128,7 @@ export default function Header() {
                   <IconButton onClick={() => dispatch(setAdminStand(user_id))}>
                     <MuseumRoundedIcon
                       sx={{ fontSize: 33 }}
-                      color="secondary"
+                      color="rgb(116,108,92)"
                     />
                   </IconButton>
                 </Tooltip>
@@ -142,7 +141,7 @@ export default function Header() {
                   <IconButton>
                     <MuseumTwoToneIcon
                       sx={{ fontSize: 33 }}
-                      color="secondary"
+                      color="rgb(116,108,92)"
                     />
                   </IconButton>
                 </Tooltip>

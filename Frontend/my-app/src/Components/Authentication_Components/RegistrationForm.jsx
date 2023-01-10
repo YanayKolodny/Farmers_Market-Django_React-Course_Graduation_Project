@@ -54,7 +54,7 @@ export default function RegistrationForm() {
               <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
               <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
 
-              <MDBCard className='my-5 bg-glass' style={{ backgroundColor: " rgba(135, 206, 250, 0.5)" }}>
+              <MDBCard className='my-5 bg-glass' style={{ backgroundColor: " rgba(241,229,214,0.7)" }}>
                 <MDBCardBody className='p-5' >
                   {/* Inputs of the username, email and password */}
                   <MDBInput wrapperClass='mb-3' label='Username' id='form1' type='text' onChange={e => setNewUserName(e.target.value)} />
@@ -82,7 +82,10 @@ export default function RegistrationForm() {
 
                   <br />
                   {/* The button to execute the registration action using the registerUserAsync method */}
-                  <MDBBtn className='w-100 mb-4' size='md'
+                  <MDBBtn
+                    className='w-100 '
+                    size='md'
+                    style={{ backgroundColor: "rgb(116,108,92)" }}
                     onClick={() => dispatch(registerUserAsync({
                       username: newuUserName,
                       email: newEmail,

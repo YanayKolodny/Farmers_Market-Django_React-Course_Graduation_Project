@@ -29,7 +29,7 @@ export default function StandAdminOrders() {
     <>
       <section
         className="h-100 gradient-custom"
-        style={{ backgroundColor: "rgba(241,229,214,255)" }}
+        style={{ backgroundColor: "rgba(135, 206, 250, 0.5)", minHeight: "100vh" }}
       >
         <MDBContainer className="py-5 h-100">
           <MDBRow className="justify-content-center align-items-center h-100">
@@ -39,7 +39,7 @@ export default function StandAdminOrders() {
 
                   {standOrders.length < 1 ?
                     (<div>
-                      <MDBCardHeader className="px-4 py-5" style={{ backgroundColor: "rgba(245,226,191,255)" }}> </MDBCardHeader>
+                      <MDBCardHeader className="px-4 py-5" style={{ backgroundColor: "rgb(53, 169, 231)" }}> </MDBCardHeader>
                       <MDBCardBody>
                         <h5 >There's no orders yet, but were sure it just the calm before the storm.<br /><br />
                           Meanwhile, we have a quote for you:
@@ -54,8 +54,8 @@ export default function StandAdminOrders() {
                     </div>)
                     :
                     (standOrders.map((order) => <div>
-                      <MDBCardHeader className="px-4 py-2" style={{ backgroundColor: "rgba(245,226,191,255)" }}>
-                        <MDBTypography tag="h5" className="text-muted mb-0">
+                      <MDBCardHeader className="px-4 py-2" style={{ backgroundColor: "rgb(53, 169, 231)" }}>
+                        <MDBTypography tag="h5" className=" mb-0" style={{ color: "rgb(250, 250, 250)" }}>
                           Order From: &nbsp;{order.profile.fullName}
                         </MDBTypography>
                       </MDBCardHeader>
@@ -129,7 +129,7 @@ export default function StandAdminOrders() {
                 <MDBCardFooter
                   className="border-0 px-4 py-5"
                   style={{
-                    backgroundColor: "rgba(245,226,191,255)",
+                    backgroundColor: "rgb(53, 169, 231)",
                     borderBottomLeftRadius: "10px",
                     borderBottomRightRadius: "10px",
                   }}>

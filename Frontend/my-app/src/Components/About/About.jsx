@@ -7,13 +7,10 @@ const About = () => {
     <div className='MainDiv'>
       <div >
         <h1>
-          So what is this
-          <span>&nbsp;</span>
+          <span>So what is this </span>
           <span className='h1_FarmerMarketOnline'>Farmer's Market
-            <span className='h1_Online '>Online</span
-            ></span>
-          <span>&nbsp;</span>
-          is all about?
+            <span className='h1_Online '> Online </span></span>
+          <span>is all about?</span>
         </h1>
 
         <hr />

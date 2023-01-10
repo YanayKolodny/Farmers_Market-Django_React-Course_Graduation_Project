@@ -17,10 +17,13 @@ export default function Footer() {
 
       <span style={{ position: "relative", left: "3%" }}><p>The Farmers Market - Django & React project by Yanay Kolodny and Michael Stern</p></span>
       <span >
-        <a href="https://github.com/YanayKolodny/Farmers_Market-Django_React-Course_Graduation_Project.git"
-          target="_blank">
-
-          Link To The Project's GitHub</a>
+        <a
+          href="https://github.com/YanayKolodny/Farmers_Market-Django_React-Course_Graduation_Project.git"
+          target="_blank"
+          rel="noreferrer"
+          className="git-link-btn">
+          Link To Project's GitHub
+        </a>
       </span>
     </div >
   );

@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { selectToken } from '../../../Slices/loginSlice'
 import { getOrderProductsAsync, selectOrderProducts } from '../../../Slices/ordersSlice'
+import { URL } from '../../../API/server_urls'
 
 import {
   MDBCol, MDBRow, MDBTypography,
@@ -62,7 +63,7 @@ export default function WebAdminOrderProducts(props) {
 
                                 <MDBRow style={{ fontSize: "18px" }}>
                                   <div class="col-md-1">
-                                    <img src={`http://127.0.0.1:8000${prod.prod_id.image}`}
+                                    <img src={`${URL}${prod.prod_id.image}`}
                                       class="img-fluid width-10px" alt="Phone" style={{ maxWidth: "50px" }} />
                                   </div>
                                   <MDBCol

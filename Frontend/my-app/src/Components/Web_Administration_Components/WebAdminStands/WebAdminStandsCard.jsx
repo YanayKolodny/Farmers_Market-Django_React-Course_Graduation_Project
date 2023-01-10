@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector, useDispatch } from 'react-redux';
 import { deleteStandAsync } from '../../../Slices/standsSlice'
 import { selectToken } from '../../../Slices/loginSlice'
+import { URL } from '../../../API/server_urls'
 
 import { MDBBtn, } from 'mdb-react-ui-kit';
 
@@ -14,7 +15,7 @@ export default function WebAdminStandsCard(props) {
     <div >
       <div key={props._id} className="box" >
 
-        <img className="product_img" src={`http://127.0.0.1:8000${props.image}`} alt="product" />
+        <img className="product_img" src={`${URL}${props.image}`} alt="product" />
         <div className="content">
 
           <div className="standTitle">

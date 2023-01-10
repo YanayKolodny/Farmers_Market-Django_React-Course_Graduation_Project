@@ -1,26 +1,23 @@
-
 .mainDiv {
   width: 100%;
-  background-image: url('../../public/BackgroundPhotos/welcomePageLeftDesign.jpeg');
+  background-image: url("../../public/BackgroundPhotos/welcomePageLeftDesign.jpeg");
   background-repeat: no-repeat;
 }
 
 .header {
   position: relative;
   width: 100%;
-  background-color: rgba(245,226,191,255);
- 
+  background-color: rgba(245, 226, 191, 255);
 }
 
 .invisible-button {
   background-color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   overflow: hidden;
-  outline:none;
+  outline: none;
 }
-
 
 .nav {
   width: 100%;

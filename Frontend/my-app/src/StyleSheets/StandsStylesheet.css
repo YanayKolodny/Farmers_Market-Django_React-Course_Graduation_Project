@@ -26,8 +26,8 @@
   max-height: 350px;
   width: 100%;
   border: 2px;
-  border-style:solid;
-  border-color: rgba(245,226,191,255);
+  border-style: solid;
+  border-color: rgba(245, 226, 191);
   padding: 16px;
 }
 
@@ -64,7 +64,6 @@
   font-size: 15px;
 }
 
-
 .goToStand_button {
   width: 100%;
   height: 35px;
@@ -82,6 +81,5 @@
   gap: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
-  background-color: #8fc700;
+  background-color: rgb(116, 108, 92);
 }
-

@@ -12,7 +12,7 @@ export default function UserMenufilter() {
           <Link to="" className="link">
             <button
               className="filter_btn">
-              Personal Information
+              Personal Details
             </button>
           </Link>
 

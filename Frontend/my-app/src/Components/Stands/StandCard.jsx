@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 import { StandProductsProvider } from '../../Slices/productsSlice'
 import { updStandCart } from '../../Slices/standCartSlice'
-
+import { URL } from '../../API/server_urls'
 // This component uses as the card to present a stand by receiving its data as props.
 // The StandComponent module sends the stands data here in order to present them. 
 export default function StandCard(props) {
@@ -15,11 +15,16 @@ export default function StandCard(props) {
     dispatch(StandProductsProvider(props._id))
     dispatch(updStandCart(props._id))
   }
+  console.log("${URL}${props.image}", `${URL}${props.image}`)
 
   return (
     <div key={props._id} className="standBox" >
 
-      <img style={{ height: "210px" }} className="stand_img" src={`http://127.0.0.1:8000${props.image}`} alt="Stand" />
+      <img
+        style={{ height: "210px" }}
+        className="stand_img"
+        src={`${URL}${props.image}`} alt="Stand"
+      />
 
       {/* Presenting the title and price: */}
       <div className="standContent">
@@ -40,7 +45,7 @@ export default function StandCard(props) {
         <div className="btnBox">
           <button
             onClick={() => updateStandProductsAndCart()}
-            className="goToStand_button">
+            className="goToStand_button buy_button">
             Go To Stand
             <BsShopWindow className="stand_icon" style={{ fontSize: "22px" }} />
           </button>

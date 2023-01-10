@@ -16,6 +16,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     top: 13,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: "0 4px",
+    backgroundColor: "rgb(116,108,92)"
   },
 }));
 
@@ -26,7 +27,7 @@ export default function CustomizedBadges() {
     <Tooltip title="Shopping Cart">
       <IconButton aria-label="cart">
         <StyledBadge badgeContent={cartProdsAmount} color="primary">
-          <ShoppingCartOutlinedIcon sx={{ fontSize: 33 }} color="secondary" />
+          <ShoppingCartOutlinedIcon sx={{ fontSize: 33 }} color="rgb(116,108,92)" />
         </StyledBadge>
       </IconButton>
     </Tooltip>
