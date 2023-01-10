@@ -54,10 +54,10 @@ Project is created with:
 ![welcomePage](https://user-images.githubusercontent.com/108010066/211542643-0da415d2-f5a3-4030-aaee-979e30947437.png)
 
 ### Stands Page:
-![standsPage](https://user-images.githubusercontent.com/108010066/203860692-de73c80f-5938-44a1-8861-85b24d01b875.jpeg)
+![standsPage](https://user-images.githubusercontent.com/108010066/211543601-a29e123c-1935-4c96-9ec4-f3da53fd3db2.png)
 
 ### Products Page:
-![productsPage](https://user-images.githubusercontent.com/108010066/203860621-9d72aab0-2c1b-4343-8903-8f93abdbfd1d.jpeg)
+![productsPage](https://user-images.githubusercontent.com/108010066/211543698-63f504a5-53d2-42df-9691-763b9dce78d0.png)
 
 ## Setup
 After completing the git clone process:  
