@@ -51,7 +51,8 @@ Project is created with:
 ## Pages Examples:
 
 ### Welcome Page:
-![welcomePage](https://user-images.githubusercontent.com/108010066/203860471-0bb9dc75-5c8c-4491-ab18-f5cc8c45039e.jpeg)
+![welcomePage](<img width="1423" alt="Screen Shot 2023-01-10 at 13 37 20" src="https://user-images.githubusercontent.com/108010066/211542643-0da415d2-f5a3-4030-aaee-979e30947437.png">
+)
 
 ### Stands Page:
 ![standsPage](https://user-images.githubusercontent.com/108010066/203860692-de73c80f-5938-44a1-8861-85b24d01b875.jpeg)
