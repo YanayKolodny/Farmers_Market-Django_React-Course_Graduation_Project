@@ -54,7 +54,7 @@ Project is created with:
 ![welcomePage](https://user-images.githubusercontent.com/108010066/211542643-0da415d2-f5a3-4030-aaee-979e30947437.png)
 
 ### Stands Page:
-![standsPage](https://user-images.githubusercontent.com/108010066/211543601-a29e123c-1935-4c96-9ec4-f3da53fd3db2.png)
+![standsPage](https://user-images.githubusercontent.com/108010066/211543844-3d0f7096-5c69-4d95-8b79-184c54fd1886.png)
 
 ### Products Page:
 ![productsPage](https://user-images.githubusercontent.com/108010066/211543698-63f504a5-53d2-42df-9691-763b9dce78d0.png)
