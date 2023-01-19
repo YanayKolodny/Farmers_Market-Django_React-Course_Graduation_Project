@@ -1,10 +1,9 @@
 .footer {
-  width: 100%;
-  background-color: rgba(245, 226, 191);
-  border-radius: 10px 10px 0 0;
-  padding: 10px;
   position: relative;
   bottom: 0;
+  width: 100%;
+  background-color: rgba(245, 226, 191);
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;

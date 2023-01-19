@@ -94,7 +94,7 @@ export const loginSlice = createSlice({
           state.is_staff = jwt_decode(action.payload.access).is_staff
           state.is_superuser = jwt_decode(action.payload.access).is_superuser
           alert("Your now logged in, enjoy your time in the matket!")
-          window.location.href = "http://localhost:3000/"
+          window.location.href = "https://farmersmarketonline.netlify.app/"
         }
       })
       // The extra reducer for the logout proccess - nullify the initial states data.
@@ -128,7 +128,7 @@ export const loginSlice = createSlice({
         state.is_staff = true
         localStorage.removeItem(`authTokens`)
         alert("Amazing, your stand is ready! \n Please login again to start managing it!")
-        window.location.replace("http://localhost:3000/")
+        window.location.replace("https://farmersmarketonline.netlify.app/")
       })
   },
 });

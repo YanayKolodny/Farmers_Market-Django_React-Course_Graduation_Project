@@ -47,12 +47,20 @@
   color: #2c5777;
 }
 
-.CardTypeBtns {
-  font-size: 35px;
-  color: #39739d;
-}
-
 .ProductAmountInput {
   width: 50px;
   text-align: center;
+}
+
+.CardTypeBtns {
+  font-size: 35px;
+  color: #39739d;
+  margin-top: -20px;
+}
+
+.CardDetailsContainer {
+}
+
+.CardInputContainer p {
+  margin-bottom: -0.05rem;
 }

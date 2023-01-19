@@ -1,8 +1,8 @@
-.MainDiv{
+.MainDiv {
   position: static;
-  background-image: url('../../public/BackgroundPhotos/option1.jpeg');
+  background-image: url("../../public/BackgroundPhotos/option1.jpeg");
   background-repeat: no-repeat;
-  background-size:cover; 
+  background-size: cover;
   background-position: top;
   min-height: 100vh;
   min-width: 100vh;
@@ -12,16 +12,18 @@
   margin: 0;
   padding: 2rem;
   text-align: left;
-  }
-  
-.MainDiv h1{
-      font-weight: 500;
-      font-size: 2.5vw;    
-  }
+}
+
+.MainDiv h1 {
+  position: relative;
+  top: -1.5%;
+  font-weight: 500;
+  font-size: 2.5vw;
+}
 
 .h1_FarmerMarketOnline {
   font-family: "Apple Chancery", serif;
-  font-size: 3.8vw; 
+  font-size: 3.8vw;
   color: rgb(0, 0, 0);
   -webkit-text-stroke: 0.5px white;
   text-shadow: 1px 1px 5px #868879;
@@ -33,53 +35,49 @@
   text-shadow: 2px 2px 10px #ffffff;
 }
 
-.MainDiv hr{
-    width:50%;
-    border: none;
-    border-bottom: 2px solid rgba(119, 119, 119, 0.25);
+.MainDiv hr {
+  width: 50%;
+  border: none;
+  border-bottom: 2px solid rgba(119, 119, 119, 0.25);
 }
 
-.aboutText{
+.aboutText {
   position: relative;
   left: -18%;
   width: 68%;
-  margin: 1rem auto;
+  margin: -2.3rem auto;
   padding: 2rem;
   text-align: justify;
   transition: all 0.3s;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.aboutText p{
-    line-height: 1.5;
-    letter-spacing: 0.3px;
-    word-spacing: 2px;
-    font-size: larger;
+.aboutText p {
+  font-size: large;
 }
 
-.aboutText p:first-child::first-letter{
-    color:#FE5F55;
-    font-weight: bold;
-    font-size: 70px;
-    float: left;
-    line-height: 60px;
-    padding-right: 8px;
-    margin-top: -3px;
-}
-
-.aboutText hr {
-  width: 100%;
+.aboutText p:first-child::first-letter {
+  color: #fe5f55;
+  font-weight: bold;
+  font-size: 70px;
+  float: left;
+  line-height: 60px;
+  padding-right: 8px;
+  margin-top: -3px;
 }
 
 .facePhotosContainer {
   position: relative;
+  top: 4%;
+  max-width: 50%;
   display: flex;
   justify-content: left;
   left: 9%;
   font-family: Rockwell;
 }
 
-.faceAndNameContainer{
+.faceAndNameContainer {
   padding-right: 40px;
   padding-left: 40px;
 }
@@ -93,8 +91,8 @@
   position: relative;
   width: 150px;
   height: 150px;
-  background-image: url('../../public/BackgroundPhotos/Yanay.jpeg');
-  background-size:cover; 
+  background-image: url("../../public/BackgroundPhotos/Yanay.jpeg");
+  background-size: cover;
   background-position: 50%;
   border-radius: 50%;
 }
@@ -103,8 +101,8 @@
   position: relative;
   width: 150px;
   height: 150px;
-  background-image: url('../../public/BackgroundPhotos/Michael.jpeg');
-  background-size:cover; 
+  background-image: url("../../public/BackgroundPhotos/Michael.jpeg");
+  background-size: cover;
   background-position: 50%;
   border-radius: 50%;
 }

@@ -1,15 +1,22 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 
-import { selectLastOrderDetails } from '../../Slices/ordersSlice'
+import { selectLastOrderDetails, LastOrderDetailsEraser } from '../../Slices/ordersSlice'
 
 
 const CheckOutComplete = () => {
+  const dispatch = useDispatch()
   const orderDetails = useSelector(selectLastOrderDetails)
 
-  return (
+  useEffect(() => {
+    return () => {
+      dispatch(LastOrderDetailsEraser())
+    }
+  }, [])
 
+
+  return (
     <div id='checkoutSuccessContainer' >
       {orderDetails && (
         <div id='card'>

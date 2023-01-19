@@ -80,19 +80,16 @@ export const createOrderAsync = createAsyncThunk(
   })
 // ADD Create Order ENDS
 
-// DELETE Order Start
-// export const deleteOrderAsync = createAsyncThunk(
-//   'orders/deleteOrder',
-//   async (cred) => {
-//     const response = await deleteOrder(cred.token, cred.id);
-//     return cred.id;
-//   })
-// DELETE Order ENDS
 
 
 export const ordersSlice = createSlice({
   name: 'orders',
   initialState,
+  reducers: {
+    LastOrderDetailsEraser: (state, action) => {
+      state.LastOrderDetails = { createdTime: "updating", standName: "Updating", order_id: "Updating" }
+    },
+  },
   extraReducers: (builder) => {
     builder
       // extraReducer to update the AllOrders state.
@@ -125,7 +122,7 @@ export const ordersSlice = createSlice({
 });
 
 // exports of the states and reducers:
-export const { } = ordersSlice.actions;
+export const { LastOrderDetailsEraser } = ordersSlice.actions;
 export const selectOrders = (state) => state.orders.AllOrders;
 export const selectUserOrders = (state) => state.orders.UserOrders;
 export const selectStandOrders = (state) => state.orders.StandOrders;

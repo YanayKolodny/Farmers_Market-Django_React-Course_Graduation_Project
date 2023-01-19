@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../API/registrationAPI'
 
 // All the initial states to be used for the registration proccess 
@@ -27,7 +28,7 @@ export const registrationSlice = createSlice({
     builder
       .addCase(registerUserAsync.fulfilled, (state, action) => {
         alert("We are very Happy you chose to register! \n Enjoy and let us know if you need anything ;)")
-        window.location.href = "http://localhost:3000/auth/login"
+        window.location.href = "https://farmersmarketonline.netlify.app/"
       })
   },
 });

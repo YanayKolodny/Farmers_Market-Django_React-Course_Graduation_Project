@@ -53,7 +53,7 @@ export default function Header() {
 
           <div style={{ position: "relative" }}>
             <Link to={"/"} style={{ textDecoration: "none" }}>
-              <h1 style={{ textDecoration: "none", position: "relative", left: "18%" }}>
+              <h1 style={{ textDecoration: "none", position: "relative", left: "11%" }}>
                 <span style={{ fontSize: "40px" }} className='h1_FarmerMarketOnline'>Farmer's Market
                   <span className='h1_Online '> Online</span
                   ></span>
@@ -69,9 +69,9 @@ export default function Header() {
             {/* if the user is not logged, show the login/registration buttons, els show the logout button */}
             {logged ? (
               <>
-                <Avatar sx={{ bgcolor: "rgb(116,108,92)", color: "rgba(241,229,214,255)", width: "160px", borderRadius: "20%" }} >
-                  Hello {username.charAt(0).toUpperCase() + username.slice(1)}
-                </Avatar>
+                <p className="userName">
+                  Hello {username.charAt(0).toUpperCase() + username.slice(1)}!
+                </p>
 
                 <Link to={"/"} className="mark_icon_box">
                   <button

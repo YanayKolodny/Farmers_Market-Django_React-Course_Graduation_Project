@@ -83,3 +83,13 @@
   transition: all 0.3s ease;
   background-color: rgb(116, 108, 92);
 }
+
+.StandRegContainer {
+  background-color: rgb(214, 233, 208);
+}
+
+.Stand_Reg_Title {
+  position: relative;
+  padding-top: 3%;
+  text-align: center;
+}

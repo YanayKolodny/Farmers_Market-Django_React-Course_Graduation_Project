@@ -10,6 +10,15 @@
   background-color: rgba(245, 226, 191, 255);
 }
 
+.userName {
+  position: relative;
+  top: 0.5rem;
+  font-size: 1.5rem;
+  color: rgb(116, 108, 92);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 .invisible-button {
   background-color: Transparent;
   background-repeat: no-repeat;

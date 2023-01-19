@@ -78,19 +78,19 @@ const StandRegistration = () => {
   };
 
   return (
-    <div>
-      <div className='Top' style={{ textAlign: "center" }}>
+    <div className='StandRegContainer'>
+      <div className='Stand_Reg_Title' >
         <h1>
           We're very excited you decided join the
           <span>&nbsp;</span>
           <span className='h1_FarmerMarketOnline'>Farmer's Market
             <span className='h1_Online '> Online</span></span><br />
-          Please enter your stand details below:
+          Please enter your stand's details here:
         </h1>
       </div>
 
       <div >
-        <MDBCard className='my-5 bg-glass' style={{ backgroundColor: "rgba(135, 206, 250, 0.5)", alignItems: "center" }}>
+        <MDBCard className='my-5 bg-glass' style={{ backgroundColor: "rgba(245, 226, 191)", alignItems: "center" }}>
           <MDBCol md='6' className='p-5 '>
             <form onSubmit={handleSubmit}>
               <MDBInput
@@ -146,7 +146,7 @@ const StandRegistration = () => {
               </p>
 
               {/* The button to execute the login action using the loginUserAsync method */}
-              <MDBBtn className='w-100 mb-4' size='md'
+              <MDBBtn className='w-100 mb-4' size='md' style={{ backgroundColor: "rgb(116,108,92)" }}
                 type="submit" onClick={() => dispatch(updUserStatusAsync({ token: token, is_staff: { is_staff: 1 }, user_id: user_id }))}
               >Create Stand</MDBBtn>
             </form>
